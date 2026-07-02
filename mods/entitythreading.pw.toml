@@ -9,5 +9,5 @@ hash = "0403c25e5b109be62d8775b6b0b062a3f677b67b148cebd3fbd0de36af3b0ccc"
 
 [option]
 optional = true
-default = false
+default = true
 description = "Entity Threading — optimización de entidades."

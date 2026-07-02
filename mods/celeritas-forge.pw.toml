@@ -9,5 +9,5 @@ hash = "7bce487c869e698ae72daf7d9f9da52585d2dc53041ee6e628ec062b8374d7c8"
 
 [option]
 optional = true
-default = false
+default = true
 description = "Celeritas render engine. Incompatible con OptiFine."

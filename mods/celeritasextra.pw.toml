@@ -9,5 +9,5 @@ hash = "e68b6aca1b19444b24e990748e885b64e356e2c5eb61cbc24fabbc63ebe45fc2"
 
 [option]
 optional = true
-default = false
+default = true
 description = "Celeritas Extra features."
