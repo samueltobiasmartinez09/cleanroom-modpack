@@ -102,19 +102,20 @@ jobs:
           download_and_extract windows "$WIN_URL"   "$WIN_NAME"   "/tmp/builds/windows"
           download_and_extract macos   "$MAC_URL"   "$MAC_NAME"   "/tmp/builds/macos"
 
-          # Copy shared content (mmc-pack, configs, resourcepacks, etc.)
+          # Create pre-launch scripts and update instance.cfg
           for os in linux windows macos; do
             BUILD="/tmp/builds/$os"
-            # Ensure patches, config, resourcepacks, shaderpacks exist
-            cp "$GITHUB_WORKSPACE/mmc-pack.json" "$BUILD/" 2>/dev/null || true
-          done
+            cat > "$BUILD/minecraft/pre-launch.sh" << 'SCRIPT'
+#!/bin/sh
+"$INST_JAVA" -jar "$INST_DIR/minecraft/packwiz-installer-bootstrap.jar" "https://raw.githubusercontent.com/samueltobiasmartinez09/cleanroom-modpack/main/pack.toml"
+cp -f "$INST_DIR/minecraft/mmc-pack.json" "$INST_DIR/mmc-pack.json"
+SCRIPT
+            chmod +x "$BUILD/minecraft/pre-launch.sh"
 
-          # Update instance.cfg and build zips
-          for os in linux windows macos; do
-            BUILD="/tmp/builds/$os"
             CFG="$BUILD/instance.cfg"
             if [ -f "$CFG" ]; then
               sed -i "s/JavaVersion=.*/JavaVersion=$JAVA_SHORT/" "$CFG"
+              sed -i "s|PreLaunchCommand=.*|PreLaunchCommand=/bin/sh \$INST_DIR/minecraft/pre-launch.sh|" "$CFG"
             fi
 
             ZIPNAME="cleanroom-modpack-v1.0.0-$os.zip"
