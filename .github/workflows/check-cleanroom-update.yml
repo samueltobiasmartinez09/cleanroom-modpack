@@ -1,0 +1,48 @@
+name: Check Cleanroom Update
+
+on:
+  schedule:
+    - cron: '0 6 * * 1'
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Get current Cleanroom version
+        id: current
+        run: |
+          version=$(grep '"cachedVersion"' mmc-pack.json | head -1 | cut -d'"' -f4)
+          echo "version=$version" | tee -a $GITHUB_OUTPUT
+
+      - name: Fetch latest Cleanroom release
+        id: latest
+        run: |
+          json=$(curl -sL https://api.github.com/repos/CleanroomMC/Cleanroom/releases/latest)
+          tag=$(echo "$json" | grep '"tag_name"' | cut -d'"' -f4)
+          echo "tag=$tag" | tee -a $GITHUB_OUTPUT
+
+      - name: Update mmc-pack.json
+        if: steps.latest.outputs.tag != '' && steps.latest.outputs.tag != steps.current.outputs.version
+        run: |
+          NEW_VER="${{ steps.latest.outputs.tag }}"
+          echo "Updating Cleanroom: ${{ steps.current.outputs.version }} → $NEW_VER"
+
+          curl -sL -o /tmp/cleanroom.zip \
+            "https://github.com/CleanroomMC/Cleanroom/releases/download/$NEW_VER/Cleanroom-MMC-instance-$NEW_VER.zip"
+
+          unzip -o /tmp/cleanroom.zip mmc-pack.json -d /tmp/
+          cp /tmp/mmc-pack.json mmc-pack.json
+
+          HASH=$(sha256sum mmc-pack.json | cut -d' ' -f1)
+          sed -i "s/hash = \".*\"/hash = \"$HASH\"/" mmc-pack.json.pw.toml
+
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add mmc-pack.json mmc-pack.json.pw.toml
+          git commit -m "Update Cleanroom to $NEW_VER"
+          git push

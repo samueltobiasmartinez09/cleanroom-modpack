@@ -1,6 +1,19 @@
 hash-format = "sha256"
 
 [[files]]
+file = ".github/workflows/check-cleanroom-update.yml"
+hash = "e4590956cc3a8b89e2fa93cf15e2bffcd333a182b8e5c1153fe12543386017d8"
+
+[[files]]
+file = "mmc-pack.json"
+hash = "9e3a92d051d622679fab1398af52a5f80796e7f001427eda516b6a3b838091d5"
+
+[[files]]
+file = "mmc-pack.json.pw.toml"
+hash = "fe5c4310c7a419c9e597c7b35985d3d9743f7b0f0530d9acde8d089b95e5ae0c"
+metafile = true
+
+[[files]]
 file = "mods/alfheim-lighting-engine.pw.toml"
 hash = "5b8e138b7b21ad18dd6ebdbf6cc4b23c2d2137a7253fd968a4030487c5fb9a28"
 metafile = true
