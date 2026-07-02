@@ -5,11 +5,12 @@ on:
     - cron: '0 6 * * 1'
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   check:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
     steps:
       - uses: actions/checkout@v4
 
@@ -26,23 +27,44 @@ jobs:
           tag=$(echo "$json" | grep '"tag_name"' | cut -d'"' -f4)
           echo "tag=$tag" | tee -a $GITHUB_OUTPUT
 
-      - name: Update mmc-pack.json
+      - name: Update mmc-pack.json and rebuild all platform zips
         if: steps.latest.outputs.tag != '' && steps.latest.outputs.tag != steps.current.outputs.version
         run: |
           NEW_VER="${{ steps.latest.outputs.tag }}"
           echo "Updating Cleanroom: ${{ steps.current.outputs.version }} → $NEW_VER"
 
+          # Download new mmc-pack.json
           curl -sL -o /tmp/cleanroom.zip \
             "https://github.com/CleanroomMC/Cleanroom/releases/download/$NEW_VER/Cleanroom-MMC-instance-$NEW_VER.zip"
-
           unzip -o /tmp/cleanroom.zip mmc-pack.json -d /tmp/
           cp /tmp/mmc-pack.json mmc-pack.json
 
+          # Update packwiz hash
           HASH=$(sha256sum mmc-pack.json | cut -d' ' -f1)
           sed -i "s/hash = \".*\"/hash = \"$HASH\"/" mmc-pack.json.pw.toml
 
+          # Rebuild all 3 platform zips
+          for os in linux windows macos; do
+            echo "=== Building $os zip ==="
+            BUILD="/tmp/builds/$os"
+            mkdir -p "$BUILD"
+
+            # Clone the repo content (without .git) as base
+            cp -r "$GITHUB_WORKSPACE"/* "$BUILD/" 2>/dev/null || true
+            cp -r "$GITHUB_WORKSPACE"/.github "$BUILD/" 2>/dev/null || true
+            rm -rf "$BUILD/.git"
+
+            # Keep existing JRE in each build
+            # (JREs are committed to the repo, already in minecraft/jre25)
+
+            ZIPNAME="cleanroom-modpack-v1.0.0-$os.zip"
+            (cd "$BUILD" && zip -r9 "/tmp/$ZIPNAME" . -x ".packignore")
+            gh release upload v1.0.0 "/tmp/$ZIPNAME" --clobber
+          done
+
+          # Commit changes
           git config user.name "github-actions"
           git config user.email "actions@github.com"
           git add mmc-pack.json mmc-pack.json.pw.toml
-          git commit -m "Update Cleanroom to $NEW_VER"
+          git commit -m "Update Cleanroom to $NEW_VER (all platforms)"
           git push

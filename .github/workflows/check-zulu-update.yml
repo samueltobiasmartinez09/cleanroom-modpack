@@ -5,11 +5,12 @@ on:
     - cron: '0 6 * * 1'
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   check:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
     steps:
       - uses: actions/checkout@v4
 
@@ -19,73 +20,126 @@ jobs:
           version=$(cat minecraft/jre25/release | grep JAVA_RUNTIME_VERSION | cut -d'"' -f2)
           echo "version=$version" | tee -a $GITHUB_OUTPUT
 
-      - name: Fetch latest Zulu JRE 25 info
+      - name: Fetch latest Zulu JRE 25 for all platforms
         id: latest
         run: |
-          json=$(curl -sL "https://api.azul.com/metadata/v1/zulu/packages/?java_version=25&os=linux&arch=x86&archive_type=tar.gz&java_package_type=jre&javafx=false&latest=true&page_size=1")
-          url=$(echo "$json" | python3 -c "import sys,json; print(json.load(sys.stdin)[0]['download_url'])")
-          name=$(echo "$json" | python3 -c "import sys,json; print(json.load(sys.stdin)[0]['name'])")
-          echo "url=$url" | tee -a $GITHUB_OUTPUT
-          echo "name=$name" | tee -a $GITHUB_OUTPUT
+          for os in linux windows macos; do
+            case "$os" in
+              linux)   atype="tar.gz" ;;
+              windows) atype="zip" ;;
+              macos)   atype="zip" ;;
+            esac
+            json=$(curl -sL "https://api.azul.com/metadata/v1/zulu/packages/?java_version=25&os=$os&arch=x86&archive_type=$atype&java_package_type=jre&javafx=false&latest=true&page_size=1")
+            url=$(echo "$json" | python3 -c "import sys,json; print(json.load(sys.stdin)[0]['download_url'])")
+            name=$(echo "$json" | python3 -c "import sys,json; print(json.load(sys.stdin)[0]['name'])")
+            echo "${os}_url=$url" | tee -a $GITHUB_OUTPUT
+            echo "${os}_name=$name" | tee -a $GITHUB_OUTPUT
+          done
 
-      - name: Download, extract and rebuild instance zip
-        if: steps.latest.outputs.url != ''
+      - name: Build platform zips with updated JRE
+        if: steps.latest.outputs.linux_url != ''
         run: |
-          NEW_URL="${{ steps.latest.outputs.url }}"
-          NEW_NAME="${{ steps.latest.outputs.name }}"
+          LINUX_URL="${{ steps.latest.outputs.linux_url }}"
+          LINUX_NAME="${{ steps.latest.outputs.linux_name }}"
+          WIN_URL="${{ steps.latest.outputs.windows_url }}"
+          WIN_NAME="${{ steps.latest.outputs.windows_name }}"
+          MAC_URL="${{ steps.latest.outputs.macos_url }}"
+          MAC_NAME="${{ steps.latest.outputs.macos_name }}"
 
-          # Extract java version from filename (e.g. zulu25.34.17-ca-crac-jre25.0.3-linux_x64.tar.gz)
-          JAVA_VER=$(echo "$NEW_NAME" | grep -oP 'jre\K[\d.]+(?=-linux)')
-          echo "Found Zulu JRE: $JAVA_VER from $NEW_URL"
-
-          # Check if version changed
+          JAVA_VER=$(echo "$LINUX_NAME" | grep -oP 'jre\K[\d.]+(?=-linux)')
           CURRENT="${{ steps.current.outputs.version }}"
+
           if [ "$JAVA_VER" = "$CURRENT" ]; then
             echo "No update needed (current: $CURRENT)"
             exit 0
           fi
           echo "Updating: $CURRENT → $JAVA_VER"
+          JAVA_SHORT=$(echo "$JAVA_VER" | cut -d. -f1-3)
 
-          # Remove old JRE
+          download_and_extract() {
+            local os="$1" url="$2" name="$3" dest="$4"
+            echo "--- Processing $os ---"
+            mkdir -p "/tmp/builds/$os"
+            case "$os" in
+              linux)
+                curl -sL -o /tmp/zulu_linux.tar.gz "$url"
+                mkdir -p /tmp/zulu_extract_linux
+                tar -xzf /tmp/zulu_linux.tar.gz -C /tmp/zulu_extract_linux
+                JRE_DIR=$(find /tmp/zulu_extract_linux -maxdepth 2 -name "bin" -type d | head -1)
+                JRE_DIR=$(dirname "$JRE_DIR")
+                mv "$JRE_DIR" "$dest/minecraft/jre25"
+                rm -f "$dest/minecraft/jre25/readme.txt" "$dest/minecraft/jre25/Welcome.html" "$dest/minecraft/jre25/DISCLAIMER" 2>/dev/null
+                ;;
+              windows)
+                curl -sL -o /tmp/zulu_win.zip "$url"
+                unzip -qo /tmp/zulu_win.zip -d /tmp/zulu_extract_win
+                JRE_DIR=$(find /tmp/zulu_extract_win -maxdepth 2 -name "bin" -type d | head -1)
+                JRE_DIR=$(dirname "$JRE_DIR")
+                mv "$JRE_DIR" "$dest/minecraft/jre25"
+                rm -f "$dest/minecraft/jre25/readme.txt" "$dest/minecraft/jre25/Welcome.html" "$dest/minecraft/jre25/DISCLAIMER" 2>/dev/null
+                ;;
+              macos)
+                curl -sL -o /tmp/zulu_mac.zip "$url"
+                unzip -qo /tmp/zulu_mac.zip -d /tmp/zulu_extract_mac
+                JRE_DIR=$(find /tmp/zulu_extract_mac -maxdepth 4 -name "Home" -type d | head -1)
+                mv "$JRE_DIR"/* "$dest/minecraft/jre25/"
+                rm -f "$dest/minecraft/jre25/readme.txt" "$dest/minecraft/jre25/Welcome.html" "$dest/minecraft/jre25/DISCLAIMER" 2>/dev/null
+                ;;
+            esac
+          }
+
+          # Build base structure (copy from repo, strip JRE)
+          for os in linux windows macos; do
+            BUILD="/tmp/builds/$os"
+            cp -r "$GITHUB_WORKSPACE"/* "$BUILD/" 2>/dev/null || true
+            cp -r "$GITHUB_WORKSPACE"/.github "$BUILD/" 2>/dev/null || true
+            rm -rf "$BUILD/minecraft/jre25" "$BUILD/.git" "$BUILD/.github"
+            mkdir -p "$BUILD/minecraft"
+          done
+
+          # Download and inject each platform's JRE
+          download_and_extract linux   "$LINUX_URL" "$LINUX_NAME" "/tmp/builds/linux"
+          download_and_extract windows "$WIN_URL"   "$WIN_NAME"   "/tmp/builds/windows"
+          download_and_extract macos   "$MAC_URL"   "$MAC_NAME"   "/tmp/builds/macos"
+
+          # Copy shared content (mmc-pack, configs, resourcepacks, etc.)
+          for os in linux windows macos; do
+            BUILD="/tmp/builds/$os"
+            # Ensure patches, config, resourcepacks, shaderpacks exist
+            cp "$GITHUB_WORKSPACE/mmc-pack.json" "$BUILD/" 2>/dev/null || true
+          done
+
+          # Update instance.cfg and build zips
+          for os in linux windows macos; do
+            BUILD="/tmp/builds/$os"
+            CFG="$BUILD/instance.cfg"
+            if [ -f "$CFG" ]; then
+              sed -i "s/JavaVersion=.*/JavaVersion=$JAVA_SHORT/" "$CFG"
+            fi
+
+            ZIPNAME="cleanroom-modpack-v1.0.0-$os.zip"
+            echo "Building $ZIPNAME ..."
+            (cd "$BUILD" && zip -r9 "/tmp/$ZIPNAME" . -x ".packignore")
+          done
+
+          # Upload all 3 zips
+          for os in linux windows macos; do
+            ZIPNAME="cleanroom-modpack-v1.0.0-$os.zip"
+            gh release upload v1.0.0 "/tmp/$ZIPNAME" --clobber
+          done
+
+          # Update Linux JRE in repo (for version tracking)
           rm -rf minecraft/jre25
-
-          # Download and extract new JRE
-          curl -sL -o /tmp/zulu.tar.gz "$NEW_URL"
-          mkdir -p /tmp/zulu-extract
-          tar -xzf /tmp/zulu.tar.gz -C /tmp/zulu-extract
-
-          # Find the extracted directory (contains 'zulu' and has bin/java)
-          JRE_DIR=$(find /tmp/zulu-extract -maxdepth 2 -name "bin" -type d | head -1)
-          JRE_DIR=$(dirname "$JRE_DIR")
-          mv "$JRE_DIR" minecraft/jre25
-
-          # Clean up unnecessary files
-          rm -f minecraft/jre25/readme.txt minecraft/jre25/Welcome.html minecraft/jre25/DISCLAIMER 2>/dev/null
-
-          # Get the java version for instance.cfg
-          JAVA_SHORT=$(minecraft/jre25/bin/java -version 2>&1 | head -1 | grep -oP '\d+\.\d+\.\d+')
-          echo "JRE version: $JAVA_SHORT"
-
-          # Update instance.cfg with new version info
+          cp -r /tmp/builds/linux/minecraft/jre25 minecraft/jre25
+          cp minecraft/jre25/release .
           sed -i "s/JavaVersion=.*/JavaVersion=$JAVA_SHORT/" instance.cfg
 
-          # Update release file
-          cp minecraft/jre25/release .
-
-          # Rebuild instance zip
-          rm -f cleanroom-modpack-v1.0.0.zip
-          zip -r cleanroom-modpack-v1.0.0.zip . -x ".packignore"
-
-          # Upload to release
-          gh release upload v1.0.0 cleanroom-modpack-v1.0.0.zip --clobber
-
-          # Commit jre25 changes to repo
           git config user.name "github-actions"
           git config user.email "actions@github.com"
           git add minecraft/jre25/ instance.cfg
-          git commit -m "Update Zulu JRE to $JAVA_VER"
+          git commit -m "Update Zulu JRE to $JAVA_SHORT (all platforms)"
           git push
 
-          echo "Zulu JRE updated to $JAVA_VER"
+          echo "Zulu JRE updated to $JAVA_SHORT (linux, windows, macos)"
         env:
           GH_TOKEN: ${{ github.token }}
