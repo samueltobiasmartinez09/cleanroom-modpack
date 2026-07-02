@@ -5,4 +5,4 @@ side = "both"
 [download]
 url = "https://raw.githubusercontent.com/samueltobiasmartinez09/cleanroom-modpack/main/mmc-pack.json"
 hash-format = "sha256"
-hash = "9e3a92d051d622679fab1398af52a5f80796e7f001427eda516b6a3b838091d5"
+hash = "d081624b806edbb1aaaf143ef540466ef9bb84650ddfe73db506e2e57ff79ba9"
