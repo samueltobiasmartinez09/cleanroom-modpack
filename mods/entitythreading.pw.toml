@@ -1,0 +1,13 @@
+name = "EntityThreading"
+filename = "EntityThreading-2.2.jar"
+side = "both"
+
+[download]
+url = "https://github.com/samueltobiasmartinez09/cleanroom-modpack/releases/download/v1.0.0/EntityThreading-2.2.jar"
+hash-format = "sha256"
+hash = "0403c25e5b109be62d8775b6b0b062a3f677b67b148cebd3fbd0de36af3b0ccc"
+
+[option]
+optional = true
+default = false
+description = "Entity Threading — optimización de entidades."

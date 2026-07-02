@@ -31,6 +31,26 @@ hash = "9efd22acd1fb9176b1511196a3c7ac792f63eea1619d5d9f0d57d000c38742ee"
 metafile = true
 
 [[files]]
+file = "mods/celeritas-forge.pw.toml"
+hash = "8259fffc5ac2ae85926e35560567e7812b86adaa0dd93647a2391f18c81eff78"
+metafile = true
+
+[[files]]
+file = "mods/celeritasdynamiclights.pw.toml"
+hash = "d89ec017560efb5aa9d25ab9d7669d1b0e307afb8bf755f0501403f102cdd382"
+metafile = true
+
+[[files]]
+file = "mods/celeritasextra.pw.toml"
+hash = "5cfae865c7cf20c8b18fa7c26605d2efcc5be0c2cf634fc638fcd359b87d5e51"
+metafile = true
+
+[[files]]
+file = "mods/celeritasleafculling.pw.toml"
+hash = "449379d89d34a7fc3d53bd9a30f8ad7eb408ce6c5e1a4172ef7fdb8dc31d7a43"
+metafile = true
+
+[[files]]
 file = "mods/chibi.pw.toml"
 hash = "6e4917e2ffeb7aafae7f2597b29f27420ac9c506d6c47f165c3d77f3ae5dc571"
 metafile = true
@@ -93,6 +113,11 @@ metafile = true
 [[files]]
 file = "mods/entity-distance-1-12-2.pw.toml"
 hash = "3745ed3815303e57983e620085d6c9f5f88ad6ab6e517d88bf9da7668fada34a"
+metafile = true
+
+[[files]]
+file = "mods/entitythreading.pw.toml"
+hash = "258725f135e00b8114beceaad2fcc9074706c77c016ac2e332649e271218e9ab"
 metafile = true
 
 [[files]]
@@ -181,6 +206,11 @@ hash = "780f849666ae2b08a782a5d9571a3fe17d0ede5b65ffb3d2622419e8dd6b35ab"
 metafile = true
 
 [[files]]
+file = "mods/logcleaner.pw.toml"
+hash = "6c673242a9ac45746ed18808618df4dde520befb45986dc181d180359d1c703f"
+metafile = true
+
+[[files]]
 file = "mods/macaws-bridges.pw.toml"
 hash = "4389388fec84ee12d7965fa633529f870fd12bc70905ade7daddb3012008ac0c"
 metafile = true
@@ -203,6 +233,11 @@ metafile = true
 [[files]]
 file = "mods/minecraft-comes-alive-reforged.pw.toml"
 hash = "cc15f2210e683db48496bdc9316317a38576e376513b70383033729736e5721d"
+metafile = true
+
+[[files]]
+file = "mods/missingvariantaccessfix.pw.toml"
+hash = "c892d3b80bfccfdea52ae3f751f6ffa16ce6d07d78953faf4135ee9589ce445d"
 metafile = true
 
 [[files]]
@@ -248,6 +283,16 @@ metafile = true
 [[files]]
 file = "mods/openblocks-elevator.pw.toml"
 hash = "3431051cce65c011bd7cd75412ad676ada9353851d7383199276faf34b5f3d6f"
+metafile = true
+
+[[files]]
+file = "mods/optifine.pw.toml"
+hash = "01c65de57cecbbd555550a9e35562610d205f3c092f232eebe9ce99ef03e1fc6"
+metafile = true
+
+[[files]]
+file = "mods/optinotfine.pw.toml"
+hash = "91a6f5055b3f5f6a72df9ad6e1281ce03244ed822063eceea4f1d46077732e86"
 metafile = true
 
 [[files]]
@@ -373,4 +418,19 @@ metafile = true
 [[files]]
 file = "mods/zume.pw.toml"
 hash = "145943325d3b47d7fb916835d8530645e3f5806c72f68f9d75183493b2c68425"
+metafile = true
+
+[[files]]
+file = "resourcepacks/fix-textures-optifine.pw.toml"
+hash = "feba6e23a3f594a40f2c130f2e4e99460d3aaccfdd363552b95a67d3dfbd3b81"
+metafile = true
+
+[[files]]
+file = "resourcepacks/fix-vintage-vainilla.pw.toml"
+hash = "893eb67cc920f193d23a0ccc0fe55a87ef0ff184950152e1334f1b7fc94806fd"
+metafile = true
+
+[[files]]
+file = "shaderpacks/seus-renewed.pw.toml"
+hash = "b821ba1b104296bb4ee24f57570bae8ea2bc58157912dbec60e4d4398a86f1df"
 metafile = true

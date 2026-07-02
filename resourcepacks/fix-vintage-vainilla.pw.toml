@@ -1,0 +1,8 @@
+name = "Fix_Vintage_Vainilla"
+filename = "Fix_Vintage_Vainilla.zip"
+side = "both"
+
+[download]
+url = "https://github.com/samueltobiasmartinez09/cleanroom-modpack/releases/download/v1.0.0/Fix_Vintage_Vainilla.zip"
+hash-format = "sha256"
+hash = "c32c057c5f1f097cab58006b24a3505284d2b481fa82c5d80719fe27d96f954b"

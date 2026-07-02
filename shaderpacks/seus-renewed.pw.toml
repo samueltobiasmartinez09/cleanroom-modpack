@@ -1,0 +1,8 @@
+name = "SEUS-Renewed"
+filename = "SEUS-Renewed-v1.0.1.zip"
+side = "both"
+
+[download]
+url = "https://github.com/samueltobiasmartinez09/cleanroom-modpack/releases/download/v1.0.0/SEUS-Renewed-v1.0.1.zip"
+hash-format = "sha256"
+hash = "cefd78715b2e93151011bd01708f752bc3076fc9a59956c0a9666b4297127350"

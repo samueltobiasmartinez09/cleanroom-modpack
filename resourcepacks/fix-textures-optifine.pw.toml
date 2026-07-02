@@ -1,0 +1,8 @@
+name = "Fix_Textures_OptiFine"
+filename = "Fix_Textures_OptiFine.zip"
+side = "both"
+
+[download]
+url = "https://github.com/samueltobiasmartinez09/cleanroom-modpack/releases/download/v1.0.0/Fix_Textures_OptiFine.zip"
+hash-format = "sha256"
+hash = "1e68b61ea599a8da21f48f3aa66f525814c2e2be4aa97e85828e5d1feb863290"
