@@ -1,0 +1,13 @@
+name = "Mo' Creatures Extended"
+filename = "mocreatures-12.4.9.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "68b2d16f6fd9d306d0327b605b964ad9d7c8a6ab"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8347728
+project-id = 867351

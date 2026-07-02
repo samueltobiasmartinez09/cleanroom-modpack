@@ -1,0 +1,13 @@
+name = "HybridFix"
+filename = "hybridfix-2.4.0.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "0ffa8b4f1a3d3a8e2cd3f08c6a24905dc28af688"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8098456
+project-id = 1166614

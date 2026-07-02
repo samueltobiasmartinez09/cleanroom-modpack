@@ -1,0 +1,13 @@
+name = "Cleanroom Modpack"
+author = "samueltobiasmartinez09"
+version = "1.0.0"
+pack-format = "packwiz:1.1.0"
+
+[index]
+file = "index.toml"
+hash-format = "sha256"
+hash = "d6a89df5e8119ba92fa73dc996e30150ec94af153237cf83115a5a573dde6736"
+
+[versions]
+forge = "14.23.5.2860"
+minecraft = "1.12.2"
