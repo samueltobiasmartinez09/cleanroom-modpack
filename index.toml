@@ -2,11 +2,11 @@ hash-format = "sha256"
 
 [[files]]
 file = ".github/workflows/check-cleanroom-update.yml"
-hash = "44e823415368a1a373bf437b4c47c2a915bc33e142672e2453f9abc6bcd8d31d"
+hash = "1ce7e61723fc5ae909d4227ed10c70d5f6528c491561b6210b46da293afe4106"
 
 [[files]]
 file = ".github/workflows/check-zulu-update.yml"
-hash = "3034abaa5e2b9d84fc613c84ba8a4c6018d5a88429473f60861809f96b9ca627"
+hash = "d27d71d9fe5097c85a594f28601d083cb5b6d5f4633ead849fe7e131328bb57c"
 
 [[files]]
 file = "cleanroom-version.txt"
@@ -57,22 +57,22 @@ metafile = true
 
 [[files]]
 file = "mods/celeritas-forge.pw.toml"
-hash = "32e01d0291e838ddbd9c5aed4a4304085db4c56708b67315b7b49f360c29933b"
+hash = "11dc0dad7f22a03843ccaf2182b7555cf8f8ee90cac4ec2f1bd54c8343db672c"
 metafile = true
 
 [[files]]
 file = "mods/celeritasdynamiclights.pw.toml"
-hash = "841875c993fc2f49a69fdfc8d2911fee6b474ecd3435b630445f308cfeba4dec"
+hash = "7e5ecc1ad0e5ef99a6a6b4a3cd337b0cc3f03c5cc99f7be31dede1cfa2455359"
 metafile = true
 
 [[files]]
 file = "mods/celeritasextra.pw.toml"
-hash = "fb4f40437eac1b2ed6f2cb596ebc935da845497398b31ab74b287bdcb6bc7e5f"
+hash = "a4e0391ef7106b37292d89fcda2eb2ec3452b2a15e5a4cf94b8d93eb258aa60d"
 metafile = true
 
 [[files]]
 file = "mods/celeritasleafculling.pw.toml"
-hash = "3cfaa47b4f80496bf287373bf36fa638610d6f8670841d4c2ad2e80ee301dae0"
+hash = "a55508f4b47139d72313e0a62d7aa596320b126bf74a20ac4bccff2d26196267"
 metafile = true
 
 [[files]]
@@ -312,12 +312,12 @@ metafile = true
 
 [[files]]
 file = "mods/optifine.pw.toml"
-hash = "fa425569096c574e8c1c0e204c33915c218773f6b0be4d83bc9bd651b5d69903"
+hash = "9e36a2b9da4920b9551158b5d1eff3266eac61155736dfadb21698eeb0434cda"
 metafile = true
 
 [[files]]
 file = "mods/optinotfine.pw.toml"
-hash = "bfec14135a85a9c362078e991ddb96ac941a66fa9353e1c34b084481d1127d76"
+hash = "b9d15ea6b9d098b3f2a939343b0c8ffa35b0a41dd05862d290993e4f1396b3df"
 metafile = true
 
 [[files]]

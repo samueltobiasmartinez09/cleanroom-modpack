@@ -10,4 +10,5 @@ hash = "d0bc0def34396cfaf384afd21fae2523bdca1a5f0a649958bff0de8b0dd4e691"
 [option]
 optional = true
 default = true
+group = "Celeritas"
 description = "Celeritas Leaf Culling."

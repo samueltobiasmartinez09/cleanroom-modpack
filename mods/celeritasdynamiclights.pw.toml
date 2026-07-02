@@ -10,4 +10,5 @@ hash = "49e4bada51e5b888f70569de605d1425c37c59321b88d0b1b8d234096d4b7012"
 [option]
 optional = true
 default = true
+group = "Celeritas"
 description = "Celeritas Dynamic Lights."

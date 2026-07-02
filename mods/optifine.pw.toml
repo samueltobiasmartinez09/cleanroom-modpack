@@ -10,4 +10,5 @@ hash = "58bd0865025a99d031220bdc855ede653aff865e49bda2064a31f4b1cf11622c"
 [option]
 optional = true
 default = false
+group = "OptiFine"
 description = "OptiFine HD U G6 pre1 — shaders y optimización. Incompatible con Celeritas."

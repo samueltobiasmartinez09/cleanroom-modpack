@@ -10,4 +10,5 @@ hash = "0c94ab4d79975664a6cbe23bcb9c8bfc7adaf8d8a459cb3ecf9cfc10e7522813"
 [option]
 optional = true
 default = false
+group = "OptiFine"
 description = "Compatibilidad de OptiFine con CleanroomMC."
