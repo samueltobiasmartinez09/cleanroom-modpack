@@ -17,7 +17,7 @@ jobs:
       - name: Get current Cleanroom version
         id: current
         run: |
-          version=$(grep '"cachedVersion"' mmc-pack.json | head -1 | cut -d'"' -f4)
+          version=$(cat cleanroom-version.txt)
           echo "version=$version" | tee -a $GITHUB_OUTPUT
 
       - name: Fetch latest Cleanroom release
@@ -39,9 +39,16 @@ jobs:
           unzip -o /tmp/cleanroom.zip mmc-pack.json -d /tmp/
           cp /tmp/mmc-pack.json mmc-pack.json
 
+          # Patch version to Forge's latest to suppress false update notification
+          sed -i 's/"cachedVersion": "[^"]*"/"cachedVersion": "14.23.5.2860"/' mmc-pack.json
+          sed -i 's/"version": "[^"]*"/"version": "14.23.5.2860"/' mmc-pack.json
+
           # Update packwiz hash
           HASH=$(sha256sum mmc-pack.json | cut -d' ' -f1)
           sed -i "s/hash = \".*\"/hash = \"$HASH\"/" mmc-pack.json.pw.toml
+
+          # Store new Cleanroom version
+          echo "$NEW_VER" > cleanroom-version.txt
 
           # Rebuild all 3 platform zips
           for os in linux windows macos; do
@@ -79,6 +86,6 @@ SCRIPT
           # Commit changes
           git config user.name "github-actions"
           git config user.email "actions@github.com"
-          git add mmc-pack.json mmc-pack.json.pw.toml
+          git add mmc-pack.json mmc-pack.json.pw.toml cleanroom-version.txt
           git commit -m "Update Cleanroom to $NEW_VER (all platforms)"
           git push

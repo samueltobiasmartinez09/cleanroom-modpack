@@ -2,11 +2,23 @@ hash-format = "sha256"
 
 [[files]]
 file = ".github/workflows/check-cleanroom-update.yml"
-hash = "e4590956cc3a8b89e2fa93cf15e2bffcd333a182b8e5c1153fe12543386017d8"
+hash = "44e823415368a1a373bf437b4c47c2a915bc33e142672e2453f9abc6bcd8d31d"
+
+[[files]]
+file = ".github/workflows/check-zulu-update.yml"
+hash = "3034abaa5e2b9d84fc613c84ba8a4c6018d5a88429473f60861809f96b9ca627"
+
+[[files]]
+file = "cleanroom-version.txt"
+hash = "a21c85012a148e7991b66e4554504941a963de12819602925b676a113d1b7976"
+
+[[files]]
+file = "instance.cfg"
+hash = "4707710f64f31b2cf1976aa1a7465d1d00c11b720541e41d3daa254225b1b1e4"
 
 [[files]]
 file = "mmc-pack.json"
-hash = "9e3a92d051d622679fab1398af52a5f80796e7f001427eda516b6a3b838091d5"
+hash = "d081624b806edbb1aaaf143ef540466ef9bb84650ddfe73db506e2e57ff79ba9"
 
 [[files]]
 file = "mmc-pack.json.pw.toml"
@@ -90,7 +102,7 @@ metafile = true
 
 [[files]]
 file = "mods/decocraft.pw.toml"
-hash = "9bfe94e3bfc1a392eca371400b4dc82cd24d5bd9c05fa137116690b3e3c1a639"
+hash = "4beb19d1f2925cfd7a6519f4e3b49eeb6d4b7b6dba44ce8d5d658f03b1d9458b"
 metafile = true
 
 [[files]]
@@ -160,7 +172,7 @@ metafile = true
 
 [[files]]
 file = "mods/gputape.pw.toml"
-hash = "211d2a581e464797fcca19ca4394aca676ca58aaaf3323f10d338e1084eb058d"
+hash = "f55058dd5dcd268efa850366d723081dbf0187bf44de00e1dadb050f417552dc"
 metafile = true
 
 [[files]]
@@ -330,7 +342,7 @@ metafile = true
 
 [[files]]
 file = "mods/ptrlib.pw.toml"
-hash = "b4a05a52e66b8801b103553129b214da4f36a1e3f03b2628f72f3804a6bc1445"
+hash = "8ffbb6b58bf3aadc13b3af8162b9fe7f3cdd49789c0c3ba965719c565550868b"
 metafile = true
 
 [[files]]

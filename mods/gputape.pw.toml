@@ -1,13 +1,13 @@
-name = "GPUTape"
+name = "GPUBooster"
 filename = "GPUTape-1.12.2-1.0.4.jar"
-side = "both"
+side = "client"
 
 [download]
-hash-format = "sha1"
-hash = "fd1d675231bf5ed3f5348c7af07f12944d2ff233"
-mode = "metadata:curseforge"
+url = "https://cdn.modrinth.com/data/5CTSrY8X/versions/Kml7i540/GPUTape-1.12.2-1.0.4.jar"
+hash-format = "sha512"
+hash = "86a38c2ae073f9cd07901e2dd80654640b8e808bd59b42e14a1b77bf2365e65a66eb21013ab81913cae8c75ea8b34c3b41edac59f10068ac0ed2bde5195fdbed"
 
 [update]
-[update.curseforge]
-file-id = 6200046
-project-id = 1201803
+[update.modrinth]
+mod-id = "5CTSrY8X"
+version = "Kml7i540"
