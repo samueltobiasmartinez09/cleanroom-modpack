@@ -1168,23 +1168,23 @@ hash = "9efd22acd1fb9176b1511196a3c7ac792f63eea1619d5d9f0d57d000c38742ee"
 metafile = true
 
 [[files]]
-file = "mods/celeritas-forge.pw.toml"
-hash = "c62c007c5e63cf22abc3a67b67704888ab00658efe853fa1df490e91279a1e64"
+file = "mods/celeritas-auto-build.pw.toml"
+hash = "b6e5769c878cfc5bb195a603bfd4020c1518110e5ae6732ca544211c22131a79"
 metafile = true
 
 [[files]]
-file = "mods/celeritasdynamiclights.pw.toml"
-hash = "41b58f92fe7b02b02492c16db56b60025af92f424d4d44b524521a9a5a84b226"
+file = "mods/celeritas-dynamic-lights.pw.toml"
+hash = "5b2e459a13e50dba0e2882e614a1b37f4180bf740ea341f68515ca0681c05e22"
 metafile = true
 
 [[files]]
-file = "mods/celeritasextra.pw.toml"
-hash = "219475538e56bd4cc992a0c72d09bbe18b812e05a04b9d01dcc98e69c89b4ba2"
+file = "mods/celeritas-extra.pw.toml"
+hash = "e1e44765263c5a85a018c57b12d022003928c517ea0a104b3d0389784152f891"
 metafile = true
 
 [[files]]
 file = "mods/celeritasleafculling.pw.toml"
-hash = "7b1f8492e3b1016b30e161d2dc700a96cf0511c26cb73dd6d43aa920786c9b6e"
+hash = "fbad7ec934fada0504e16c541e3de4b3df05c3bd97687c0cbe6ca7b50c280738"
 metafile = true
 
 [[files]]
@@ -1250,11 +1250,6 @@ metafile = true
 [[files]]
 file = "mods/entity-distance-1-12-2.pw.toml"
 hash = "3745ed3815303e57983e620085d6c9f5f88ad6ab6e517d88bf9da7668fada34a"
-metafile = true
-
-[[files]]
-file = "mods/entitythreading.pw.toml"
-hash = "a76d2380d4bb12894a176b9031f99c0b83811de6c1cfcf3f24b726a96bdd626d"
 metafile = true
 
 [[files]]
@@ -1343,11 +1338,6 @@ hash = "780f849666ae2b08a782a5d9571a3fe17d0ede5b65ffb3d2622419e8dd6b35ab"
 metafile = true
 
 [[files]]
-file = "mods/logcleaner.pw.toml"
-hash = "6c673242a9ac45746ed18808618df4dde520befb45986dc181d180359d1c703f"
-metafile = true
-
-[[files]]
 file = "mods/macaws-bridges.pw.toml"
 hash = "4389388fec84ee12d7965fa633529f870fd12bc70905ade7daddb3012008ac0c"
 metafile = true
@@ -1373,13 +1363,8 @@ hash = "cc15f2210e683db48496bdc9316317a38576e376513b70383033729736e5721d"
 metafile = true
 
 [[files]]
-file = "mods/missingvariantaccessfix.pw.toml"
-hash = "c892d3b80bfccfdea52ae3f751f6ffa16ce6d07d78953faf4135ee9589ce445d"
-metafile = true
-
-[[files]]
-file = "mods/mixinbooter.pw.toml"
-hash = "a9cb1465ed66c70c41fea0235057995d35ea7a0cdecf28af1f0816fdf5a783b0"
+file = "mods/mixin-booter.pw.toml"
+hash = "90d03b1a37825c351b442cb88d6e0a6980c0d61e7230a3881a29208998b05974"
 metafile = true
 
 [[files]]
@@ -1485,6 +1470,11 @@ metafile = true
 [[files]]
 file = "mods/stellarcore.pw.toml"
 hash = "fa9df380bba4f7a73750b16021099e343e34cdd14cd983d570603718a1c4a501"
+metafile = true
+
+[[files]]
+file = "mods/threading-entity-mod.pw.toml"
+hash = "7364447a16c43f3befd9887a1d3651227347b8747a299e489887c31693a80c3f"
 metafile = true
 
 [[files]]

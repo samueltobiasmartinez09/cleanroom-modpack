@@ -1,8 +1,0 @@
-name = "logcleaner"
-filename = "logcleaner-2.0.0-forge.jar"
-side = "both"
-
-[download]
-url = "https://github.com/samueltobiasmartinez09/cleanroom-modpack/releases/download/v1.0.0/logcleaner-2.0.0-forge.jar"
-hash-format = "sha256"
-hash = "57c5225c89934306a06a19c6d92d2da76749f362297d1f61c12cff1e1907e29d"

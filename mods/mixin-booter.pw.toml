@@ -1,0 +1,13 @@
+name = "MixinBooter"
+filename = "!mixinbooter-11.2.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "345cc0edace6490dba7fb9a6a82a6bda00df953b"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8376475
+project-id = 419286

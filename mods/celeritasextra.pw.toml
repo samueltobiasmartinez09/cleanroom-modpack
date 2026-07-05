@@ -1,9 +1,0 @@
-name = "celeritasextra"
-filename = "celeritasextra-0.6.0.jar"
-side = "both"
-
-[download]
-url = "https://github.com/samueltobiasmartinez09/cleanroom-modpack/releases/download/v1.0.0/celeritasextra-0.6.0.jar"
-hash-format = "sha256"
-hash = "e68b6aca1b19444b24e990748e885b64e356e2c5eb61cbc24fabbc63ebe45fc2"
-

@@ -80,17 +80,14 @@ SCRIPT
             fi
 
             # Switch scripts
-            RELEASE_URL="https://github.com/samueltobiasmartinez09/cleanroom-modpack/releases/download/v1.0.0"
-
             cat > "$BUILD/minecraft/switch-to-optifine.sh" << 'SCRIPT'
 #!/bin/sh
 cd "$(dirname "$0")" || exit 1
-RELEASE_URL="https://github.com/samueltobiasmartinez09/cleanroom-modpack/releases/download/v1.0.0"
 echo "Downloading OptiFine..."
-curl -sL -o "mods/preview_OptiFine_1.12.2_HD_U_G6_pre1.jar" "$RELEASE_URL/preview_OptiFine_1.12.2_HD_U_G6_pre1.jar"
-curl -sL -o "mods/OptiNotFine-1.0.jar" "$RELEASE_URL/OptiNotFine-1.0.jar"
+curl -sL -o "mods/preview_OptiFine_1.12.2_HD_U_G6_pre1.jar" "https://optifine.net/downloadx?f=preview_OptiFine_1.12.2_HD_U_G6_pre1.jar&x=57ce0cdd0c77666d893a09f5c8971bcd"
+curl -sL -o "mods/OptiNotFine-1.0.jar" "https://media.forgecdn.net/files/7438/360/OptiNotFine-1.0.jar"
 echo "Disabling Celeritas..."
-for f in celeritas-forge-mc12.2-2.4.0-dev.jar celeritasdynamiclights-1.2.9.jar celeritasextra-0.6.0.jar celeritasleafculling-1.0.0.jar; do
+for f in celeritas-forge-mc12.2-2.4.0-dev.jar celeritasdynamiclights-1.2.9.jar celeritasextra-0.6.1.jar celeritasleafculling-1.0.0.jar; do
     [ -f "mods/$f" ] && mv "mods/$f" "mods/$f.disabled"
 done
 echo "Switched to OptiFine"
@@ -103,7 +100,7 @@ cd "$(dirname "$0")" || exit 1
 echo "Removing OptiFine..."
 rm -f "mods/preview_OptiFine_1.12.2_HD_U_G6_pre1.jar" "mods/OptiNotFine-1.0.jar"
 echo "Restoring Celeritas..."
-for f in celeritas-forge-mc12.2-2.4.0-dev.jar celeritasdynamiclights-1.2.9.jar celeritasextra-0.6.0.jar celeritasleafculling-1.0.0.jar; do
+for f in celeritas-forge-mc12.2-2.4.0-dev.jar celeritasdynamiclights-1.2.9.jar celeritasextra-0.6.1.jar celeritasleafculling-1.0.0.jar; do
     [ -f "mods/$f.disabled" ] && mv "mods/$f.disabled" "mods/$f"
 done
 echo "Switched to Celeritas"
@@ -114,12 +111,11 @@ SCRIPT
               cat > "$BUILD/minecraft/switch-to-optifine.bat" << 'SCRIPT'
 @echo off
 cd /d "%~dp0"
-set RELEASE_URL=https://github.com/samueltobiasmartinez09/cleanroom-modpack/releases/download/v1.0.0
 echo Downloading OptiFine...
-curl -sL -o "mods\preview_OptiFine_1.12.2_HD_U_G6_pre1.jar" "%RELEASE_URL%/preview_OptiFine_1.12.2_HD_U_G6_pre1.jar"
-curl -sL -o "mods\OptiNotFine-1.0.jar" "%RELEASE_URL%/OptiNotFine-1.0.jar"
+curl -sL -o "mods\preview_OptiFine_1.12.2_HD_U_G6_pre1.jar" "https://optifine.net/downloadx?f=preview_OptiFine_1.12.2_HD_U_G6_pre1.jar&x=57ce0cdd0c77666d893a09f5c8971bcd"
+curl -sL -o "mods\OptiNotFine-1.0.jar" "https://media.forgecdn.net/files/7438/360/OptiNotFine-1.0.jar"
 echo Disabling Celeritas...
-for %%f in (celeritas-forge-mc12.2-2.4.0-dev.jar celeritasdynamiclights-1.2.9.jar celeritasextra-0.6.0.jar celeritasleafculling-1.0.0.jar) do (
+for %%f in (celeritas-forge-mc12.2-2.4.0-dev.jar celeritasdynamiclights-1.2.9.jar celeritasextra-0.6.1.jar celeritasleafculling-1.0.0.jar) do (
     if exist "mods\%%f" ren "mods\%%f" "%%f.disabled"
 )
 echo Switched to OptiFine
@@ -131,7 +127,7 @@ cd /d "%~dp0"
 echo Removing OptiFine...
 del /Q "mods\preview_OptiFine_1.12.2_HD_U_G6_pre1.jar" "mods\OptiNotFine-1.0.jar" 2>nul
 echo Restoring Celeritas...
-for %%f in (celeritas-forge-mc12.2-2.4.0-dev.jar celeritasdynamiclights-1.2.9.jar celeritasextra-0.6.0.jar celeritasleafculling-1.0.0.jar) do (
+for %%f in (celeritas-forge-mc12.2-2.4.0-dev.jar celeritasdynamiclights-1.2.9.jar celeritasextra-0.6.1.jar celeritasleafculling-1.0.0.jar) do (
     if exist "mods\%%f.disabled" ren "mods\%%f.disabled" "%%f"
 )
 echo Switched to Celeritas

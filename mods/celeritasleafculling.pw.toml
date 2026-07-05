@@ -1,9 +1,13 @@
-name = "celeritasleafculling"
+name = "Celeritas Leaf Culling"
 filename = "celeritasleafculling-1.0.0.jar"
 side = "both"
 
 [download]
-url = "https://github.com/samueltobiasmartinez09/cleanroom-modpack/releases/download/v1.0.0/celeritasleafculling-1.0.0.jar"
-hash-format = "sha256"
-hash = "d0bc0def34396cfaf384afd21fae2523bdca1a5f0a649958bff0de8b0dd4e691"
+hash-format = "sha1"
+hash = "b86b2087682fbfa71e9754c2dcf84fbf9d80a810"
+mode = "metadata:curseforge"
 
+[update]
+[update.curseforge]
+file-id = 7550650
+project-id = 1449111

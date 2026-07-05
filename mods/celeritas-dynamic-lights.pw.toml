@@ -1,0 +1,13 @@
+name = "Celeritas/Nothirium Dynamic Lights"
+filename = "celeritasdynamiclights-1.2.9.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "66813928b54148db900cfb65392a46ffa83547de"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8258286
+project-id = 1313831

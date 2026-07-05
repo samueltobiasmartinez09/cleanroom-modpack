@@ -1,9 +1,0 @@
-name = "celeritas-forge"
-filename = "celeritas-forge-mc12.2-2.4.0-dev.jar"
-side = "both"
-
-[download]
-url = "https://github.com/samueltobiasmartinez09/cleanroom-modpack/releases/download/v1.0.0/celeritas-forge-mc12.2-2.4.0-dev.jar"
-hash-format = "sha256"
-hash = "7bce487c869e698ae72daf7d9f9da52585d2dc53041ee6e628ec062b8374d7c8"
-

@@ -1,9 +1,0 @@
-name = "celeritasdynamiclights"
-filename = "celeritasdynamiclights-1.2.9.jar"
-side = "both"
-
-[download]
-url = "https://github.com/samueltobiasmartinez09/cleanroom-modpack/releases/download/v1.0.0/celeritasdynamiclights-1.2.9.jar"
-hash-format = "sha256"
-hash = "49e4bada51e5b888f70569de605d1425c37c59321b88d0b1b8d234096d4b7012"
-

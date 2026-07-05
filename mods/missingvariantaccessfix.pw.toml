@@ -1,8 +1,0 @@
-name = "MissingVariantAccessFix"
-filename = "MissingVariantAccessFix-1.0.0.jar"
-side = "both"
-
-[download]
-url = "https://github.com/samueltobiasmartinez09/cleanroom-modpack/releases/download/v1.0.0/MissingVariantAccessFix-1.0.0.jar"
-hash-format = "sha256"
-hash = "ee94a32c5ef77e28ada5c8849047ceb60ca742c52034d3c547f8196682e88544"
