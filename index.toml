@@ -6,7 +6,7 @@ hash = "a21c85012a148e7991b66e4554504941a963de12819602925b676a113d1b7976"
 
 [[files]]
 file = "instance.cfg"
-hash = "84e77a9a5472683a7eb8e5e4cd3c11a6fdd781908b2cb50aad4e0a3b2dfc03f3"
+hash = "b4a617ea75a1184fcfd3352f9a5f0882c9a7a1adeded94218e1b02903b75ae7f"
 
 [[files]]
 file = "minecraft/install-java.bat"
@@ -455,15 +455,15 @@ metafile = true
 
 [[files]]
 file = "release/cleanroom-modpack-v1.0.0-linux.zip"
-hash = "ebf0f380ca28b6670d4e9523397e5f97fb486877b0566c14ec873a07c1fa5fc7"
+hash = "4e343b1be0465a9c54fc6c8e0fda606ff66a4d5a91bb92b8778066057a2d3551"
 
 [[files]]
 file = "release/cleanroom-modpack-v1.0.0-macos.zip"
-hash = "3d7cbf410efcfa69350e99915b19ed93db507931b9fb49d78056f06380e3ff7f"
+hash = "caed635f69cbb82396d101d987ded133b40a4c014cb61c899ab4c180a019a1c2"
 
 [[files]]
 file = "release/cleanroom-modpack-v1.0.0-windows.zip"
-hash = "c2d93a1d220ff81b53c7ba61fdf48f5801a59de947ad20a022e81998faedae42"
+hash = "6f35dc1def54cbcba21931544659b241e23087b76ede0229d4d8076bd3c2c07e"
 
 [[files]]
 file = "resourcepacks/fix-textures-optifine.pw.toml"
