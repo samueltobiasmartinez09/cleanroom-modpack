@@ -2,3 +2,4 @@ minecraft/*
 !minecraft/jre25/
 release
 packwiz
+.github_token
