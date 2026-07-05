@@ -94,19 +94,17 @@ jobs:
             echo "$os JRE extracted to $dest"
           }
 
-          # Extract each JRE directly to its repo directory
-          download_and_extract linux   "$LINUX_URL" "$GITHUB_WORKSPACE/minecraft/jre25"
-          download_and_extract windows "$WIN_URL"   "$GITHUB_WORKSPACE/minecraft/jre25-win"
-          download_and_extract macos   "$MAC_URL"   "$GITHUB_WORKSPACE/minecraft/jre25-mac"
+          # Extract Linux JRE to repo directory (Win/Mac JREs solo en zips manuales, >100MB)
+          download_and_extract linux "$LINUX_URL" "$GITHUB_WORKSPACE/minecraft/jre25"
 
           # Update JavaVersion in instance.cfg
           sed -i "s/JavaVersion=.*/JavaVersion=$JAVA_SHORT/" instance.cfg
 
-          # Commit changes (no zip builds — JREs go straight to repo)
+          # Commit changes
           git config user.name "github-actions"
           git config user.email "actions@github.com"
-          git add minecraft/jre25/ minecraft/jre25-win/ minecraft/jre25-mac/ instance.cfg
-          git commit -m "Update Zulu JRE to $JAVA_SHORT (linux, windows, macos)"
+          git add minecraft/jre25/ instance.cfg
+          git commit -m "Update Zulu JRE to $JAVA_SHORT (Linux)"
           git push
 
-          echo "Zulu JRE updated to $JAVA_SHORT (all 3 platforms committed to repo)"
+          echo "Zulu JRE updated to $JAVA_SHORT (Linux committed to repo)"
