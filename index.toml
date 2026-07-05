@@ -1,10 +1,6 @@
 hash-format = "sha256"
 
 [[files]]
-file = "AGENTS.md"
-hash = "1817cb3e57618b7c812fa39cacd9b3da75d2c31fb345054aa22a2c8bc2635ce7"
-
-[[files]]
 file = "cleanroom-version.txt"
 hash = "a21c85012a148e7991b66e4554504941a963de12819602925b676a113d1b7976"
 
