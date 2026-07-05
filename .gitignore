@@ -1,5 +1,4 @@
 minecraft/*
-!minecraft/jre25/
 !minecraft/pre-launch.sh
 !minecraft/pre-launch.bat
 !minecraft/switch-to-optifine.sh
