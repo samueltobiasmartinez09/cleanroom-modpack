@@ -4,10 +4,12 @@
 Mantener modpack CleanroomMC 1.12.2 con packwiz: JRE Zulu 25 bundleado, Celeritas como renderer requerido, scripts switch que instalan OptiFine externamente.
 
 ## State Actual
-- JRE Zulu 25.0.3 CRaC bundleado en `minecraft/jre25/`
+- JRE Zulu 25.0.3 CRaC bundleado en `minecraft/jre25/` (Linux, trackeado en repo)
+- Win/Mac JREs >100MB, NO trackeados en repo — solo van en los zips de plataforma
 - Celeritas mods REQUERIDOS (no optional)
 - OptiFine/NotFine eliminados del pack, se instalan externamente via scripts switch
-- `.packwizignore` excluye `.github/`, `scripts/`, `packwiz`, `.github_token`
+- `.packwizignore` excluye `.github/`, `scripts/`, `packwiz`, `.github_token`, `AGENTS.md`
+- 6 scripts estáticos en `minecraft/` con wildcards (version-agnostic)
 - Hashes verificados contra instancia Prism en `/opt/PrismLauncher/instances/cleanroom-modpack-v1.0.0-linux/`
 
 ## Mod Sources
@@ -16,10 +18,10 @@ Mantener modpack CleanroomMC 1.12.2 con packwiz: JRE Zulu 25 bundleado, Celerita
 - 3 assets propios mantienen GitHub Release: `Fix_Textures_OptiFine.zip`, `Fix_Vintage_Vainilla.zip`, `SEUS-Renewed-v1.0.1.zip`
 
 ## Git State
-- Branch: main (commit `10261d3`)
+- Branch: main (commit `20bc963`)
 - Remote: https://github.com/samueltobiasmartinez09/cleanroom-modpack.git
 - Token: `.github_token` (local, ignorado por git via `.gitignore`, no trackeado)
-- Release v1.0.0 creada en GitHub con 3 assets propios
+- Release v1.0.0 creada en GitHub con 6 assets: 3 propios + 3 zips de plataforma
 
 ## Changes Completed
 1. **celeritas-forge** → GitHub kappa-maintainer (Celery auto-build, `celeritas-auto-build.pw.toml`)
@@ -34,6 +36,12 @@ Mantener modpack CleanroomMC 1.12.2 con packwiz: JRE Zulu 25 bundleado, Celerita
 10. **Historia git** limpiada (filter-branch removió token de todos los commits)
 11. **Push** a GitHub (force push tras filter-branch)
 12. **Release v1.0.0** creada con 3 assets: Fix_Textures_OptiFine.zip, Fix_Vintage_Vainilla.zip, SEUS-Renewed-v1.0.1.zip
+13. **6 scripts estáticos** creados en `minecraft/` con wildcards (pre-launch, switch-optifine, switch-celeritas)
+14. **Workflows refactorizados**: solo commitean al repo, sin build de zips
+15. **JREs Win/Mac** descargados, 3 zips de plataforma construidos y subidos a Release v1.0.0
+16. **AGENTS.md** añadido a `.packwizignore`
+17. **.gitignore** actualizado: trackea scripts + Linux JRE, Win/Mac JREs excluidos (>100MB)
+18. **check-zulu-update.yml**: solo actualiza Linux JRE en repo (Win/Mac solo en zips)
 
 ================================================================================
 ## PLAN: Workflows solo commitean al repo (sin rebuild de zips)
@@ -64,12 +72,10 @@ for f in celeritas-forge-mc12.2-*.jar celeritasdynamiclights-*.jar \
 ```
 Esto evita que los scripts se desactualicen cuando cambian versiones de mods.
 
-### .gitignore a actualizar
+### .gitignore actual
 ```gitignore
 minecraft/*
 !minecraft/jre25/
-!minecraft/jre25-win/
-!minecraft/jre25-mac/
 !minecraft/pre-launch.sh
 !minecraft/pre-launch.bat
 !minecraft/switch-to-optifine.sh
@@ -81,56 +87,29 @@ packwiz
 .github_token
 ```
 
-### check-cleanroom-update.yml — cambios
-ELIMINAR (~100 líneas):
-- Build de zips (loop for os in linux windows macos)
-- Creación inline de scripts (pre-launch, switch scripts)
-- Subida a Release
-- cp -r $GITHUB_WORKSPACE
+NOTA: Win/Mac JREs >100MB, NO trackeados en repo — solo van en los zips de plataforma.
 
-MANTENER:
-- Fetch latest Cleanroom release
-- Download mmc-pack.json
-- Patch cachedVersion/version a 14.23.5.2860
-- Update hash en mmc-pack.json.pw.toml
-- Guardar nueva versión en cleanroom-version.txt
-- git add + commit: mmc-pack.json, mmc-pack.json.pw.toml, cleanroom-version.txt
+### check-cleanroom-update.yml — implementado
+- Solo commitea mmc-pack.json + mmc-pack.json.pw.toml + cleanroom-version.txt
+- Sin build de zips, sin scripts inline, sin subida a Release
 
-### check-zulu-update.yml — cambios
-ELIMINAR:
-- Build de zips (loop for os)
-- Creación inline de scripts
-- Subida a Release
-- cp -r $GITHUB_WORKSPACE
+### check-zulu-update.yml — implementado
+- Descarga Linux JRE → extrae a `minecraft/jre25/` → commitea
+- Solo Linux JRE en repo (Win/Mac >100MB, no trackeables)
+- Actualiza JavaVersion en instance.cfg
 
-MANTENER:
-- Fetch latest Zulu JRE 25 para linux, windows, macos
-- download_and_extract() function
-
-CAMBIAR:
-- En vez de build de zips, extraer cada JRE a su directorio en el repo:
-  - Linux → `minecraft/jre25/`
-  - Windows → `minecraft/jre25-win/`
-  - macOS → `minecraft/jre25-mac/`
-- Update instance.cfg (JavaVersion)
-- git add + commit: minecraft/jre25/, minecraft/jre25-win/, minecraft/jre25-mac/, instance.cfg
-
-### Construcción manual de los 3 zips (1 vez)
-Script local que:
-1. Crea `minecraft/jre25-win/` temporal renombrado a `jre25/` para Windows
-2. Crea `minecraft/jre25-mac/` temporal renombrado a `jre25/` para macOS
-3. Incluye solo los scripts correspondientes a cada plataforma:
-   - Linux: pre-launch.sh, switch-to-optifine.sh, switch-to-celeritas.sh
-   - macOS: pre-launch.sh, switch-to-optifine.sh, switch-to-celeritas.sh
-   - Windows: pre-launch.bat, switch-to-optifine.bat, switch-to-celeritas.bat
-4. Cada zip incluye SOLO su JRE nativo + scripts nativos
-5. Subir los 3 zips a Release v1.0.0
+### Construcción manual de los 3 zips (ejecutado)
+1. Descargar JREs Win/Mac desde Azul API
+2. Copiar repo base, reemplazar jre25/ por cada JRE nativo
+3. Incluir solo scripts nativos: Linux/macOS → .sh, Windows → .bat
+4. Windows: cambiar PreLaunchCommand a cmd.exe
+5. Subir a Release v1.0.0
 
 ## Relevant Files
 - `.github/workflows/check-cleanroom-update.yml` - workflow cleanroom
 - `.github/workflows/check-zulu-update.yml` - workflow zulu
-- `.packwizignore` - exclude .github/, scripts/, packwiz, .github_token
-- `.gitignore` - exclude .github_token + track minecraft scripts/jres
+- `.packwizignore` - exclude .github/, scripts/, packwiz, .github_token, AGENTS.md
+- `.gitignore` - exclude .github_token + track minecraft scripts/Linux JRE (Win/Mac JREs >100MB excluidos)
 - `minecraft/pre-launch.sh` - script pre-lanzamiento Linux/macOS
 - `minecraft/pre-launch.bat` - script pre-lanzamiento Windows
 - `minecraft/switch-to-optifine.sh` - switch a OptiFine Linux/macOS
