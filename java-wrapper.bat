@@ -1,1 +1,0 @@
-@"%~dp0minecraft\jre25\java-wrapper.bat" %*

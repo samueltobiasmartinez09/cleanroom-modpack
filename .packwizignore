@@ -17,5 +17,3 @@ minecraft/switch-to-optifine.bat
 minecraft/switch-to-celeritas.sh
 minecraft/switch-to-celeritas.bat
 minecraft/packwiz-installer-bootstrap.jar
-java-wrapper.sh
-java-wrapper.bat
