@@ -1,6 +1,10 @@
 hash-format = "sha256"
 
 [[files]]
+file = "AGENTS.md"
+hash = "1817cb3e57618b7c812fa39cacd9b3da75d2c31fb345054aa22a2c8bc2635ce7"
+
+[[files]]
 file = "cleanroom-version.txt"
 hash = "a21c85012a148e7991b66e4554504941a963de12819602925b676a113d1b7976"
 
@@ -1127,6 +1131,30 @@ hash = "36cf71e63ce2816fe4456e9195e6c27fa7c9cd431c89ba762eba394ec2c7a1e3"
 [[files]]
 file = "minecraft/jre25/release"
 hash = "85f30f9418ba974baf634ff80b8d9016766586f94462fef68a57f74aa7548225"
+
+[[files]]
+file = "minecraft/pre-launch.bat"
+hash = "13e12f96f4762c5d9ac43dc1e9719d55e6fe62805cae3efcaabd2e9ad92500d5"
+
+[[files]]
+file = "minecraft/pre-launch.sh"
+hash = "69e5c79bfa05dc85fd807824da245f9ef487dc772ea772564d7147462064b705"
+
+[[files]]
+file = "minecraft/switch-to-celeritas.bat"
+hash = "5f17baf88e9c7c180d334e9c5cb300534bcf3b813c9428f50caf0b2d37780984"
+
+[[files]]
+file = "minecraft/switch-to-celeritas.sh"
+hash = "bec2a1a6291533e153c3d41e6bb8b3ad47a4d4c3f215c6bdfddbbb8325a87269"
+
+[[files]]
+file = "minecraft/switch-to-optifine.bat"
+hash = "09aa2a6ee62d7f50e754601d2e30b6c6a52006128ba3b3dda26fac710fea9d63"
+
+[[files]]
+file = "minecraft/switch-to-optifine.sh"
+hash = "b93877f79db65216ecb1463279055fb2a33420b1e90a3aa04e49a689b83df216"
 
 [[files]]
 file = "mmc-pack.json"
