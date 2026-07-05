@@ -14,9 +14,11 @@ build_zip() {
     echo "Building $ZIP_NAME ..."
 
     TMP_DIR=$(mktemp -d)
-    cp -r "$DIR" "$TMP_DIR/repo"
+    git clone "https://github.com/samueltobiasmartinez09/cleanroom-modpack.git" "$TMP_DIR/repo" --depth 1
     cd "$TMP_DIR/repo"
-    rm -rf .git scripts/ .github/
+
+    rm -rf scripts/ .github/
+    rm -f packwiz AGENTS.md cleanroom-version.txt
 
     if [ "$PLATFORM" = "windows" ]; then
         rm -f minecraft/*.sh
@@ -25,8 +27,10 @@ build_zip() {
         rm -f minecraft/*.bat
     fi
 
-    cd "$TMP_DIR"
-    zip -r "$RELEASE_DIR/$ZIP_NAME" repo/ -x "repo/.git*" > /dev/null
+    cd "$TMP_DIR/repo"
+    rm -rf .git
+    zip -r "$RELEASE_DIR/$ZIP_NAME" . > /dev/null
+    cd /tmp
     rm -rf "$TMP_DIR"
     echo "  -> $ZIP_NAME built ($(ls -lh "$RELEASE_DIR/$ZIP_NAME" | awk '{print $5}'))"
 }
