@@ -27,7 +27,7 @@ jobs:
           tag=$(echo "$json" | grep '"tag_name"' | cut -d'"' -f4)
           echo "tag=$tag" | tee -a $GITHUB_OUTPUT
 
-      - name: Update mmc-pack.json and rebuild all platform zips
+      - name: Update mmc-pack.json
         if: steps.latest.outputs.tag != '' && steps.latest.outputs.tag != steps.current.outputs.version
         run: |
           NEW_VER="${{ steps.latest.outputs.tag }}"
@@ -50,108 +50,9 @@ jobs:
           # Store new Cleanroom version
           echo "$NEW_VER" > cleanroom-version.txt
 
-          # Rebuild all 3 platform zips
-          for os in linux windows macos; do
-            echo "=== Building $os zip ==="
-            BUILD="/tmp/builds/$os"
-            mkdir -p "$BUILD"
-
-            # Clone the repo content (without .git) as base
-            cp -r "$GITHUB_WORKSPACE"/* "$BUILD/" 2>/dev/null || true
-            cp -r "$GITHUB_WORKSPACE"/.github "$BUILD/" 2>/dev/null || true
-            rm -rf "$BUILD/.git"
-
-            # Keep existing JRE in each build
-            # (JREs are committed to the repo, already in minecraft/jre25)
-
-            # Create pre-launch scripts
-            cat > "$BUILD/minecraft/pre-launch.sh" << 'SCRIPT'
-#!/bin/sh
-"$INST_JAVA" -jar "$INST_DIR/minecraft/packwiz-installer-bootstrap.jar" --timeout 0 "https://raw.githubusercontent.com/samueltobiasmartinez09/cleanroom-modpack/main/pack.toml"
-cp -f "$INST_DIR/minecraft/mmc-pack.json" "$INST_DIR/mmc-pack.json"
-SCRIPT
-            chmod +x "$BUILD/minecraft/pre-launch.sh"
-
-            if [ "$os" = "windows" ]; then
-              cat > "$BUILD/minecraft/pre-launch.bat" << 'SCRIPT'
-@"%INST_JAVA%" -jar "%INST_DIR%\minecraft\packwiz-installer-bootstrap.jar" --timeout 0 "https://raw.githubusercontent.com/samueltobiasmartinez09/cleanroom-modpack/main/pack.toml"
-@copy /Y "%INST_DIR%\minecraft\mmc-pack.json" "%INST_DIR%\mmc-pack.json"
-SCRIPT
-            fi
-
-            # Switch scripts
-            cat > "$BUILD/minecraft/switch-to-optifine.sh" << 'SCRIPT'
-#!/bin/sh
-cd "$(dirname "$0")" || exit 1
-echo "Downloading OptiFine..."
-curl -sL -o "mods/preview_OptiFine_1.12.2_HD_U_G6_pre1.jar" "https://optifine.net/downloadx?f=preview_OptiFine_1.12.2_HD_U_G6_pre1.jar&x=57ce0cdd0c77666d893a09f5c8971bcd"
-curl -sL -o "mods/OptiNotFine-1.0.jar" "https://media.forgecdn.net/files/7438/360/OptiNotFine-1.0.jar"
-echo "Disabling Celeritas..."
-for f in celeritas-forge-mc12.2-2.4.0-dev.jar celeritasdynamiclights-1.2.9.jar celeritasextra-0.6.1.jar celeritasleafculling-1.0.0.jar; do
-    [ -f "mods/$f" ] && mv "mods/$f" "mods/$f.disabled"
-done
-echo "Switched to OptiFine"
-SCRIPT
-            chmod +x "$BUILD/minecraft/switch-to-optifine.sh"
-
-            cat > "$BUILD/minecraft/switch-to-celeritas.sh" << 'SCRIPT'
-#!/bin/sh
-cd "$(dirname "$0")" || exit 1
-echo "Removing OptiFine..."
-rm -f "mods/preview_OptiFine_1.12.2_HD_U_G6_pre1.jar" "mods/OptiNotFine-1.0.jar"
-echo "Restoring Celeritas..."
-for f in celeritas-forge-mc12.2-2.4.0-dev.jar celeritasdynamiclights-1.2.9.jar celeritasextra-0.6.1.jar celeritasleafculling-1.0.0.jar; do
-    [ -f "mods/$f.disabled" ] && mv "mods/$f.disabled" "mods/$f"
-done
-echo "Switched to Celeritas"
-SCRIPT
-            chmod +x "$BUILD/minecraft/switch-to-celeritas.sh"
-
-            if [ "$os" = "windows" ]; then
-              cat > "$BUILD/minecraft/switch-to-optifine.bat" << 'SCRIPT'
-@echo off
-cd /d "%~dp0"
-echo Downloading OptiFine...
-curl -sL -o "mods\preview_OptiFine_1.12.2_HD_U_G6_pre1.jar" "https://optifine.net/downloadx?f=preview_OptiFine_1.12.2_HD_U_G6_pre1.jar&x=57ce0cdd0c77666d893a09f5c8971bcd"
-curl -sL -o "mods\OptiNotFine-1.0.jar" "https://media.forgecdn.net/files/7438/360/OptiNotFine-1.0.jar"
-echo Disabling Celeritas...
-for %%f in (celeritas-forge-mc12.2-2.4.0-dev.jar celeritasdynamiclights-1.2.9.jar celeritasextra-0.6.1.jar celeritasleafculling-1.0.0.jar) do (
-    if exist "mods\%%f" ren "mods\%%f" "%%f.disabled"
-)
-echo Switched to OptiFine
-SCRIPT
-
-              cat > "$BUILD/minecraft/switch-to-celeritas.bat" << 'SCRIPT'
-@echo off
-cd /d "%~dp0"
-echo Removing OptiFine...
-del /Q "mods\preview_OptiFine_1.12.2_HD_U_G6_pre1.jar" "mods\OptiNotFine-1.0.jar" 2>nul
-echo Restoring Celeritas...
-for %%f in (celeritas-forge-mc12.2-2.4.0-dev.jar celeritasdynamiclights-1.2.9.jar celeritasextra-0.6.1.jar celeritasleafculling-1.0.0.jar) do (
-    if exist "mods\%%f.disabled" ren "mods\%%f.disabled" "%%f"
-)
-echo Switched to Celeritas
-SCRIPT
-            fi
-
-            # Update PreLaunchCommand
-            CFG="$BUILD/instance.cfg"
-            if [ -f "$CFG" ]; then
-              if [ "$os" = "windows" ]; then
-                sed -i "s|PreLaunchCommand=.*|PreLaunchCommand=cmd.exe /c \$INST_DIR\\\minecraft\\\pre-launch.bat|" "$CFG"
-              else
-                sed -i "s|PreLaunchCommand=.*|PreLaunchCommand=/bin/sh \$INST_DIR/minecraft/pre-launch.sh|" "$CFG"
-              fi
-            fi
-
-            ZIPNAME="cleanroom-modpack-v1.0.0-$os.zip"
-            (cd "$BUILD" && zip -r9 "/tmp/$ZIPNAME" . -x ".packignore")
-            gh release upload v1.0.0 "/tmp/$ZIPNAME" --clobber
-          done
-
-          # Commit changes
+          # Commit changes (no zip builds — only repo files)
           git config user.name "github-actions"
           git config user.email "actions@github.com"
           git add mmc-pack.json mmc-pack.json.pw.toml cleanroom-version.txt
-          git commit -m "Update Cleanroom to $NEW_VER (all platforms)"
+          git commit -m "Update Cleanroom to $NEW_VER"
           git push

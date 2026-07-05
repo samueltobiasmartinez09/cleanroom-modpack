@@ -1,5 +1,13 @@
 minecraft/*
 !minecraft/jre25/
+!minecraft/jre25-win/
+!minecraft/jre25-mac/
+!minecraft/pre-launch.sh
+!minecraft/pre-launch.bat
+!minecraft/switch-to-optifine.sh
+!minecraft/switch-to-optifine.bat
+!minecraft/switch-to-celeritas.sh
+!minecraft/switch-to-celeritas.bat
 release
 packwiz
 .github_token
