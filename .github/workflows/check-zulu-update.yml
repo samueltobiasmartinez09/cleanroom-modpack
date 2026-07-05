@@ -120,78 +120,60 @@ SCRIPT
 SCRIPT
 
             # Switch scripts
+            RELEASE_URL="https://github.com/samueltobiasmartinez09/cleanroom-modpack/releases/download/v1.0.0"
+
             cat > "$BUILD/minecraft/switch-to-optifine.sh" << 'SCRIPT'
 #!/bin/sh
 cd "$(dirname "$0")" || exit 1
-python3 << 'PYEOF'
-import json
-with open('packwiz.json', 'r') as f:
-    data = json.load(f)
-cf = data.get('cachedFiles', {})
-for k in ['mods/celeritas-forge.pw.toml','mods/celeritasdynamiclights.pw.toml','mods/celeritasextra.pw.toml','mods/celeritasleafculling.pw.toml']:
-    cf.get(k, {})['optionValue'] = False
-for k in ['mods/optifine.pw.toml','mods/optinotfine.pw.toml']:
-    cf.pop(k, None)
-with open('packwiz.json', 'w') as f:
-    json.dump(data, f, indent=2)
-print('Switched to OptiFine')
-PYEOF
+RELEASE_URL="https://github.com/samueltobiasmartinez09/cleanroom-modpack/releases/download/v1.0.0"
+echo "Downloading OptiFine..."
+curl -sL -o "mods/preview_OptiFine_1.12.2_HD_U_G6_pre1.jar" "$RELEASE_URL/preview_OptiFine_1.12.2_HD_U_G6_pre1.jar"
+curl -sL -o "mods/OptiNotFine-1.0.jar" "$RELEASE_URL/OptiNotFine-1.0.jar"
+echo "Disabling Celeritas..."
+for f in celeritas-forge-mc12.2-2.4.0-dev.jar celeritasdynamiclights-1.2.9.jar celeritasextra-0.6.0.jar celeritasleafculling-1.0.0.jar; do
+    [ -f "mods/$f" ] && mv "mods/$f" "mods/$f.disabled"
+done
+echo "Switched to OptiFine"
 SCRIPT
             chmod +x "$BUILD/minecraft/switch-to-optifine.sh"
 
             cat > "$BUILD/minecraft/switch-to-celeritas.sh" << 'SCRIPT'
 #!/bin/sh
 cd "$(dirname "$0")" || exit 1
-python3 << 'PYEOF'
-import json
-with open('packwiz.json', 'r') as f:
-    data = json.load(f)
-cf = data.get('cachedFiles', {})
-for k in ['mods/optifine.pw.toml','mods/optinotfine.pw.toml']:
-    cf.get(k, {})['optionValue'] = False
-for k in ['mods/celeritas-forge.pw.toml','mods/celeritasdynamiclights.pw.toml','mods/celeritasextra.pw.toml','mods/celeritasleafculling.pw.toml']:
-    cf.pop(k, None)
-with open('packwiz.json', 'w') as f:
-    json.dump(data, f, indent=2)
-print('Switched to Celeritas')
-PYEOF
+echo "Removing OptiFine..."
+rm -f "mods/preview_OptiFine_1.12.2_HD_U_G6_pre1.jar" "mods/OptiNotFine-1.0.jar"
+echo "Restoring Celeritas..."
+for f in celeritas-forge-mc12.2-2.4.0-dev.jar celeritasdynamiclights-1.2.9.jar celeritasextra-0.6.0.jar celeritasleafculling-1.0.0.jar; do
+    [ -f "mods/$f.disabled" ] && mv "mods/$f.disabled" "mods/$f"
+done
+echo "Switched to Celeritas"
 SCRIPT
             chmod +x "$BUILD/minecraft/switch-to-celeritas.sh"
 
             cat > "$BUILD/minecraft/switch-to-optifine.bat" << 'SCRIPT'
 @echo off
 cd /d "%~dp0"
-python -c "
-import json
-with open('packwiz.json', 'r') as f:
-    data = json.load(f)
-cf = data.get('cachedFiles', {})
-for k in ['mods/celeritas-forge.pw.toml','mods/celeritasdynamiclights.pw.toml','mods/celeritasextra.pw.toml','mods/celeritasleafculling.pw.toml']:
-    cf.get(k, {})['optionValue'] = False
-for k in ['mods/optifine.pw.toml','mods/optinotfine.pw.toml']:
-    cf.pop(k, None)
-with open('packwiz.json', 'w') as f:
-    json.dump(data, f, indent=2)
-print('Switched to OptiFine')
-"
+set RELEASE_URL=https://github.com/samueltobiasmartinez09/cleanroom-modpack/releases/download/v1.0.0
+echo Downloading OptiFine...
+curl -sL -o "mods\preview_OptiFine_1.12.2_HD_U_G6_pre1.jar" "%RELEASE_URL%/preview_OptiFine_1.12.2_HD_U_G6_pre1.jar"
+curl -sL -o "mods\OptiNotFine-1.0.jar" "%RELEASE_URL%/OptiNotFine-1.0.jar"
+echo Disabling Celeritas...
+for %%f in (celeritas-forge-mc12.2-2.4.0-dev.jar celeritasdynamiclights-1.2.9.jar celeritasextra-0.6.0.jar celeritasleafculling-1.0.0.jar) do (
+    if exist "mods\%%f" ren "mods\%%f" "%%f.disabled"
+)
+echo Switched to OptiFine
 SCRIPT
 
             cat > "$BUILD/minecraft/switch-to-celeritas.bat" << 'SCRIPT'
 @echo off
 cd /d "%~dp0"
-python -c "
-import json
-with open('packwiz.json', 'r') as f:
-    data = json.load(f)
-cf = data.get('cachedFiles', {})
-for k in ['mods/optifine.pw.toml','mods/optinotfine.pw.toml']:
-    cf.get(k, {})['optionValue'] = False
-for k in ['mods/celeritas-forge.pw.toml','mods/celeritasdynamiclights.pw.toml','mods/celeritasextra.pw.toml','mods/celeritasleafculling.pw.toml']:
-    cf.pop(k, None)
-with open('packwiz.json', 'w') as f:
-    json.dump(data, f, indent=2)
-print('Switched to Celeritas')
-"
+echo Removing OptiFine...
+del /Q "mods\preview_OptiFine_1.12.2_HD_U_G6_pre1.jar" "mods\OptiNotFine-1.0.jar" 2>nul
+echo Restoring Celeritas...
+for %%f in (celeritas-forge-mc12.2-2.4.0-dev.jar celeritasdynamiclights-1.2.9.jar celeritasextra-0.6.0.jar celeritasleafculling-1.0.0.jar) do (
+    if exist "mods\%%f.disabled" ren "mods\%%f.disabled" "%%f"
+)
+echo Switched to Celeritas
 SCRIPT
 
             CFG="$BUILD/instance.cfg"

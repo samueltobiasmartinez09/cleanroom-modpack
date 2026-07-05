@@ -1,2 +1,4 @@
-minecraft/
+minecraft/*
+!minecraft/jre25/
 release
+packwiz

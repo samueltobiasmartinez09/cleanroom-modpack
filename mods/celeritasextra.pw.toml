@@ -7,8 +7,3 @@ url = "https://github.com/samueltobiasmartinez09/cleanroom-modpack/releases/down
 hash-format = "sha256"
 hash = "e68b6aca1b19444b24e990748e885b64e356e2c5eb61cbc24fabbc63ebe45fc2"
 
-[option]
-optional = true
-default = true
-group = "Celeritas"
-description = "Celeritas Extra features."

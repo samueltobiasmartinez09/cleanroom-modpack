@@ -1,20 +1,1132 @@
 hash-format = "sha256"
 
 [[files]]
-file = ".github/workflows/check-cleanroom-update.yml"
-hash = "1ce7e61723fc5ae909d4227ed10c70d5f6528c491561b6210b46da293afe4106"
-
-[[files]]
-file = ".github/workflows/check-zulu-update.yml"
-hash = "d27d71d9fe5097c85a594f28601d083cb5b6d5f4633ead849fe7e131328bb57c"
-
-[[files]]
 file = "cleanroom-version.txt"
 hash = "a21c85012a148e7991b66e4554504941a963de12819602925b676a113d1b7976"
 
 [[files]]
 file = "instance.cfg"
 hash = "4707710f64f31b2cf1976aa1a7465d1d00c11b720541e41d3daa254225b1b1e4"
+
+[[files]]
+file = "minecraft/jre25/bin/java"
+hash = "003709a8e3e934de52947f8edeb1ce6422ac00155b9eb819b8b5efe615f06acb"
+
+[[files]]
+file = "minecraft/jre25/bin/jfr"
+hash = "b9db3178d02f544cd49e877fb584b24343614c6ca1b5a052c66e6af349a06da4"
+
+[[files]]
+file = "minecraft/jre25/bin/jrunscript"
+hash = "71b817c8f917a1545703e80d6975d412acfdb5d9a79927b034f99184c5b1a440"
+
+[[files]]
+file = "minecraft/jre25/bin/jwebserver"
+hash = "97c6f4988532d1095685b0a6619dc00ed2f0d5a8801c2c1fa82ce9c9493727ee"
+
+[[files]]
+file = "minecraft/jre25/bin/keytool"
+hash = "e4a5cb11f6987153b8dfa5f124bf7faca29e7aff55d89d8bc3aa363f42d6de57"
+
+[[files]]
+file = "minecraft/jre25/bin/rmiregistry"
+hash = "f4b5298d0d86ed509b886626cc96b2b9b478f2a349c62fb6690743a6c4276f9c"
+
+[[files]]
+file = "minecraft/jre25/bin/warp"
+hash = "c40a879900f93db773473615e25c3a9a7cddec77f1a5702ce5c6ab4917fc5539"
+
+[[files]]
+file = "minecraft/jre25/conf/jaxp-strict.properties.template"
+hash = "3cc9b87633769414b22c24c97ecded8a15df630fe5ab12abca2398d88e31b32b"
+
+[[files]]
+file = "minecraft/jre25/conf/jaxp.properties"
+hash = "d4f45052a100e5aef02b6638a3b9c69b2bdd46155ceb58a52671e5d594c30100"
+
+[[files]]
+file = "minecraft/jre25/conf/logging.properties"
+hash = "8590633e1e8a7d88ffe74cc04189c5c61b1ed4703180cbc851dcd5575efcce74"
+
+[[files]]
+file = "minecraft/jre25/conf/management/jmxremote.access"
+hash = "0c25d26ee212ca1e8c33f67c3c460d43fe849c3a1d23dbe341148517602b280c"
+
+[[files]]
+file = "minecraft/jre25/conf/management/jmxremote.password.template"
+hash = "0273b6a6b9e20e6ce54c5aee70164028e0395063b2b7d39060a40b6495543dbf"
+
+[[files]]
+file = "minecraft/jre25/conf/management/management.properties"
+hash = "75e60327531d34d1ce5eb507db52711a1d926b9c77d14d6b3a392d747105488d"
+
+[[files]]
+file = "minecraft/jre25/conf/net.properties"
+hash = "f0093906820c30e079cbf79bd744d761aaf32ae917598c7ce71fac7eae16f86d"
+
+[[files]]
+file = "minecraft/jre25/conf/sdp/sdp.conf.template"
+hash = "e9441e51f0d29e25313d33a9005640f11ad93c27f01bc46a34bf02f2a98ffd6b"
+
+[[files]]
+file = "minecraft/jre25/conf/security/java.security"
+hash = "03ec1aa4a74e48d5388b200986b77e395e33c47f86fe76aa307161af19631cee"
+
+[[files]]
+file = "minecraft/jre25/conf/security/policy/README.txt"
+hash = "6da0747334b0fea7592fd92614b2bbc8b126535e129b1fee483774d914e98eb5"
+
+[[files]]
+file = "minecraft/jre25/conf/security/policy/limited/default_US_export.policy"
+hash = "758b930a526fc670ab7537f8c26321527050a31f5f42149a2dda623c56a0a1a9"
+
+[[files]]
+file = "minecraft/jre25/conf/security/policy/limited/default_local.policy"
+hash = "2b2627548e61316150d47ffc3e6cad465ca05b3cccd4785eb7d21aa7baa0f441"
+
+[[files]]
+file = "minecraft/jre25/conf/security/policy/limited/exempt_local.policy"
+hash = "8c3d7648abcd95a272ce12db870082937f4d7f6878d730d83cb7fbb31eb8b2c9"
+
+[[files]]
+file = "minecraft/jre25/conf/security/policy/unlimited/default_US_export.policy"
+hash = "758b930a526fc670ab7537f8c26321527050a31f5f42149a2dda623c56a0a1a9"
+
+[[files]]
+file = "minecraft/jre25/conf/security/policy/unlimited/default_local.policy"
+hash = "8d8a318e6d90dfd7e26612d2b6385aa704f686ca6134c551f8928418d92b851a"
+
+[[files]]
+file = "minecraft/jre25/conf/sound.properties"
+hash = "299c2360b6155eb28990ec49cd21753f97e43442fe8fab03e04f3e213df43a66"
+
+[[files]]
+file = "minecraft/jre25/legal/java.base/ADDITIONAL_LICENSE_INFO"
+hash = "a69bce275ba7a3570af6579cb0f55682cd75fedfcd49e0e8e9022270c447c916"
+
+[[files]]
+file = "minecraft/jre25/legal/java.base/ASSEMBLY_EXCEPTION"
+hash = "75292f03bf23d3db7c985aecc191029b93883200721ed23ed34a2e601463df33"
+
+[[files]]
+file = "minecraft/jre25/legal/java.base/LICENSE"
+hash = "4b9abebc4338048a7c2dc184e9f800deb349366bdf28eb23c2677a77b4c87726"
+
+[[files]]
+file = "minecraft/jre25/legal/java.base/aes.md"
+hash = "45c6d4da48325edfbff3dcf71c704e504c057904435ed23c6d57046d551eb69d"
+
+[[files]]
+file = "minecraft/jre25/legal/java.base/c-libutl.md"
+hash = "bef40679922d6fdfb7e4ddb223ad6722300f6054ba737bbf6188d60fcec517f9"
+
+[[files]]
+file = "minecraft/jre25/legal/java.base/cldr.md"
+hash = "472e341c36efc1136860ed7a6461a2af4a53ae95d55d1126726340f5ba62b06a"
+
+[[files]]
+file = "minecraft/jre25/legal/java.base/criu.md"
+hash = "3ab7c152c596d1cae98733f0217b455e28393da23e5f833ebb3662d78a269697"
+
+[[files]]
+file = "minecraft/jre25/legal/java.base/gcc.md"
+hash = "589e34f142cdf7d1430daa573e61c2e3dd0330c9eb5a2c00d4a98b3a4450810b"
+
+[[files]]
+file = "minecraft/jre25/legal/java.base/icu.md"
+hash = "be23ad20a8231d2241b37fcf401548febd8597de8373f89268882020cb7c8818"
+
+[[files]]
+file = "minecraft/jre25/legal/java.base/libnet.md"
+hash = "557e2189accf1793604e3e18451f762fa09f22a0a3c01a546249e7ea34495a3f"
+
+[[files]]
+file = "minecraft/jre25/legal/java.base/libnl_v3.2.25.md"
+hash = "6ed9b12edeebdb3a6a89574c7df6cd701c13edf973022a2833ae2c65dfb15a8f"
+
+[[files]]
+file = "minecraft/jre25/legal/java.base/libnl_v3.5.0.md"
+hash = "7a5ab4b8144adc8c6fd723b8aeff6e3241693a11225e70f259f0f9fccc93bdc9"
+
+[[files]]
+file = "minecraft/jre25/legal/java.base/lz4.md"
+hash = "dc232930221868e90593fed912c2b72a9898d711ce026b444ca1c65301bae593"
+
+[[files]]
+file = "minecraft/jre25/legal/java.base/protobuf-c.md"
+hash = "f8c5f3f7a330089cbec561d1b1f07843f7d94b918486781bdfdb6b27620dded4"
+
+[[files]]
+file = "minecraft/jre25/legal/java.base/protobuf.md"
+hash = "5796e02b18b65bd5dc9e91f94676ac5ce3602f4c53304f04facf976d398b541e"
+
+[[files]]
+file = "minecraft/jre25/legal/java.base/public_suffix.md"
+hash = "861de1e4992a7d28f1de25c73cd50d26a94779ebd749c0643fecfa56442c3429"
+
+[[files]]
+file = "minecraft/jre25/legal/java.base/siphash.md"
+hash = "5a792b5a74ad2a5f3d6a7ad8b7a841116e58a772c18bc6e392320a365b222c76"
+
+[[files]]
+file = "minecraft/jre25/legal/java.base/unicode.md"
+hash = "5194d6760f2e7eccc07804196cc619f84e730fa9d10c0529b71416186f4d12dc"
+
+[[files]]
+file = "minecraft/jre25/legal/java.base/warp.md"
+hash = "962edee93ccb825617183afbceac374da45009c6dbca537d6d31c6fe9d3361cd"
+
+[[files]]
+file = "minecraft/jre25/legal/java.compiler/ADDITIONAL_LICENSE_INFO"
+hash = "a69bce275ba7a3570af6579cb0f55682cd75fedfcd49e0e8e9022270c447c916"
+
+[[files]]
+file = "minecraft/jre25/legal/java.compiler/ASSEMBLY_EXCEPTION"
+hash = "75292f03bf23d3db7c985aecc191029b93883200721ed23ed34a2e601463df33"
+
+[[files]]
+file = "minecraft/jre25/legal/java.compiler/LICENSE"
+hash = "4b9abebc4338048a7c2dc184e9f800deb349366bdf28eb23c2677a77b4c87726"
+
+[[files]]
+file = "minecraft/jre25/legal/java.datatransfer/ADDITIONAL_LICENSE_INFO"
+hash = "a69bce275ba7a3570af6579cb0f55682cd75fedfcd49e0e8e9022270c447c916"
+
+[[files]]
+file = "minecraft/jre25/legal/java.datatransfer/ASSEMBLY_EXCEPTION"
+hash = "75292f03bf23d3db7c985aecc191029b93883200721ed23ed34a2e601463df33"
+
+[[files]]
+file = "minecraft/jre25/legal/java.datatransfer/LICENSE"
+hash = "4b9abebc4338048a7c2dc184e9f800deb349366bdf28eb23c2677a77b4c87726"
+
+[[files]]
+file = "minecraft/jre25/legal/java.desktop/ADDITIONAL_LICENSE_INFO"
+hash = "a69bce275ba7a3570af6579cb0f55682cd75fedfcd49e0e8e9022270c447c916"
+
+[[files]]
+file = "minecraft/jre25/legal/java.desktop/ASSEMBLY_EXCEPTION"
+hash = "75292f03bf23d3db7c985aecc191029b93883200721ed23ed34a2e601463df33"
+
+[[files]]
+file = "minecraft/jre25/legal/java.desktop/LICENSE"
+hash = "4b9abebc4338048a7c2dc184e9f800deb349366bdf28eb23c2677a77b4c87726"
+
+[[files]]
+file = "minecraft/jre25/legal/java.desktop/colorimaging.md"
+hash = "129dd272e6343cb400abbe3df310d85c79e4e753d50c53b0c1f928c047aca4b0"
+
+[[files]]
+file = "minecraft/jre25/legal/java.desktop/freetype.md"
+hash = "bb0b505d7ba8e0cef1d3790caebd18802d64658cb7597f0656137935cbbad953"
+
+[[files]]
+file = "minecraft/jre25/legal/java.desktop/giflib.md"
+hash = "4fdfc68f8c5e461ee899cec851290cc713e17673a0466f46973178866ddc9ed0"
+
+[[files]]
+file = "minecraft/jre25/legal/java.desktop/harfbuzz.md"
+hash = "9050c60ce9a0c2b212e746bf5b3eb8ccb064d2c41a77ac7b681b3a6eb22cc304"
+
+[[files]]
+file = "minecraft/jre25/legal/java.desktop/jpeg.md"
+hash = "c1dfb9719a71ad9f861f8728550542d681e25c8ef40e6393606e6e2a0c1d653a"
+
+[[files]]
+file = "minecraft/jre25/legal/java.desktop/lcms.md"
+hash = "3fea7c1d86ee0955f4b3911f9edfc0452008131727e6219255efdd3cc11095be"
+
+[[files]]
+file = "minecraft/jre25/legal/java.desktop/libpng.md"
+hash = "46e55b9dc9cc25bfd3ff2bb6d48b9b9caa1b8f85e69473630ec5b41d22afc3c2"
+
+[[files]]
+file = "minecraft/jre25/legal/java.desktop/mesa3d.md"
+hash = "63f4e6f75caebbccb95d903fb43e46ac7111b3624d0a34f146b276d7d9e7b152"
+
+[[files]]
+file = "minecraft/jre25/legal/java.desktop/pipewire.md"
+hash = "56a8fb1652c70ac204d13bb52ca4d678162e7d21a97d10209c2a633de8082de0"
+
+[[files]]
+file = "minecraft/jre25/legal/java.desktop/xwd.md"
+hash = "1d4ffa93c87f35084b02a7aa90a21084b4019db4fe1003c2e5ce775b4a384f59"
+
+[[files]]
+file = "minecraft/jre25/legal/java.instrument/ADDITIONAL_LICENSE_INFO"
+hash = "a69bce275ba7a3570af6579cb0f55682cd75fedfcd49e0e8e9022270c447c916"
+
+[[files]]
+file = "minecraft/jre25/legal/java.instrument/ASSEMBLY_EXCEPTION"
+hash = "75292f03bf23d3db7c985aecc191029b93883200721ed23ed34a2e601463df33"
+
+[[files]]
+file = "minecraft/jre25/legal/java.instrument/LICENSE"
+hash = "4b9abebc4338048a7c2dc184e9f800deb349366bdf28eb23c2677a77b4c87726"
+
+[[files]]
+file = "minecraft/jre25/legal/java.logging/ADDITIONAL_LICENSE_INFO"
+hash = "a69bce275ba7a3570af6579cb0f55682cd75fedfcd49e0e8e9022270c447c916"
+
+[[files]]
+file = "minecraft/jre25/legal/java.logging/ASSEMBLY_EXCEPTION"
+hash = "75292f03bf23d3db7c985aecc191029b93883200721ed23ed34a2e601463df33"
+
+[[files]]
+file = "minecraft/jre25/legal/java.logging/LICENSE"
+hash = "4b9abebc4338048a7c2dc184e9f800deb349366bdf28eb23c2677a77b4c87726"
+
+[[files]]
+file = "minecraft/jre25/legal/java.management.rmi/ADDITIONAL_LICENSE_INFO"
+hash = "a69bce275ba7a3570af6579cb0f55682cd75fedfcd49e0e8e9022270c447c916"
+
+[[files]]
+file = "minecraft/jre25/legal/java.management.rmi/ASSEMBLY_EXCEPTION"
+hash = "75292f03bf23d3db7c985aecc191029b93883200721ed23ed34a2e601463df33"
+
+[[files]]
+file = "minecraft/jre25/legal/java.management.rmi/LICENSE"
+hash = "4b9abebc4338048a7c2dc184e9f800deb349366bdf28eb23c2677a77b4c87726"
+
+[[files]]
+file = "minecraft/jre25/legal/java.management/ADDITIONAL_LICENSE_INFO"
+hash = "a69bce275ba7a3570af6579cb0f55682cd75fedfcd49e0e8e9022270c447c916"
+
+[[files]]
+file = "minecraft/jre25/legal/java.management/ASSEMBLY_EXCEPTION"
+hash = "75292f03bf23d3db7c985aecc191029b93883200721ed23ed34a2e601463df33"
+
+[[files]]
+file = "minecraft/jre25/legal/java.management/LICENSE"
+hash = "4b9abebc4338048a7c2dc184e9f800deb349366bdf28eb23c2677a77b4c87726"
+
+[[files]]
+file = "minecraft/jre25/legal/java.naming/ADDITIONAL_LICENSE_INFO"
+hash = "a69bce275ba7a3570af6579cb0f55682cd75fedfcd49e0e8e9022270c447c916"
+
+[[files]]
+file = "minecraft/jre25/legal/java.naming/ASSEMBLY_EXCEPTION"
+hash = "75292f03bf23d3db7c985aecc191029b93883200721ed23ed34a2e601463df33"
+
+[[files]]
+file = "minecraft/jre25/legal/java.naming/LICENSE"
+hash = "4b9abebc4338048a7c2dc184e9f800deb349366bdf28eb23c2677a77b4c87726"
+
+[[files]]
+file = "minecraft/jre25/legal/java.net.http/ADDITIONAL_LICENSE_INFO"
+hash = "a69bce275ba7a3570af6579cb0f55682cd75fedfcd49e0e8e9022270c447c916"
+
+[[files]]
+file = "minecraft/jre25/legal/java.net.http/ASSEMBLY_EXCEPTION"
+hash = "75292f03bf23d3db7c985aecc191029b93883200721ed23ed34a2e601463df33"
+
+[[files]]
+file = "minecraft/jre25/legal/java.net.http/LICENSE"
+hash = "4b9abebc4338048a7c2dc184e9f800deb349366bdf28eb23c2677a77b4c87726"
+
+[[files]]
+file = "minecraft/jre25/legal/java.prefs/ADDITIONAL_LICENSE_INFO"
+hash = "a69bce275ba7a3570af6579cb0f55682cd75fedfcd49e0e8e9022270c447c916"
+
+[[files]]
+file = "minecraft/jre25/legal/java.prefs/ASSEMBLY_EXCEPTION"
+hash = "75292f03bf23d3db7c985aecc191029b93883200721ed23ed34a2e601463df33"
+
+[[files]]
+file = "minecraft/jre25/legal/java.prefs/LICENSE"
+hash = "4b9abebc4338048a7c2dc184e9f800deb349366bdf28eb23c2677a77b4c87726"
+
+[[files]]
+file = "minecraft/jre25/legal/java.rmi/ADDITIONAL_LICENSE_INFO"
+hash = "a69bce275ba7a3570af6579cb0f55682cd75fedfcd49e0e8e9022270c447c916"
+
+[[files]]
+file = "minecraft/jre25/legal/java.rmi/ASSEMBLY_EXCEPTION"
+hash = "75292f03bf23d3db7c985aecc191029b93883200721ed23ed34a2e601463df33"
+
+[[files]]
+file = "minecraft/jre25/legal/java.rmi/LICENSE"
+hash = "4b9abebc4338048a7c2dc184e9f800deb349366bdf28eb23c2677a77b4c87726"
+
+[[files]]
+file = "minecraft/jre25/legal/java.scripting/ADDITIONAL_LICENSE_INFO"
+hash = "a69bce275ba7a3570af6579cb0f55682cd75fedfcd49e0e8e9022270c447c916"
+
+[[files]]
+file = "minecraft/jre25/legal/java.scripting/ASSEMBLY_EXCEPTION"
+hash = "75292f03bf23d3db7c985aecc191029b93883200721ed23ed34a2e601463df33"
+
+[[files]]
+file = "minecraft/jre25/legal/java.scripting/LICENSE"
+hash = "4b9abebc4338048a7c2dc184e9f800deb349366bdf28eb23c2677a77b4c87726"
+
+[[files]]
+file = "minecraft/jre25/legal/java.se/ADDITIONAL_LICENSE_INFO"
+hash = "a69bce275ba7a3570af6579cb0f55682cd75fedfcd49e0e8e9022270c447c916"
+
+[[files]]
+file = "minecraft/jre25/legal/java.se/ASSEMBLY_EXCEPTION"
+hash = "75292f03bf23d3db7c985aecc191029b93883200721ed23ed34a2e601463df33"
+
+[[files]]
+file = "minecraft/jre25/legal/java.se/LICENSE"
+hash = "4b9abebc4338048a7c2dc184e9f800deb349366bdf28eb23c2677a77b4c87726"
+
+[[files]]
+file = "minecraft/jre25/legal/java.security.jgss/ADDITIONAL_LICENSE_INFO"
+hash = "a69bce275ba7a3570af6579cb0f55682cd75fedfcd49e0e8e9022270c447c916"
+
+[[files]]
+file = "minecraft/jre25/legal/java.security.jgss/ASSEMBLY_EXCEPTION"
+hash = "75292f03bf23d3db7c985aecc191029b93883200721ed23ed34a2e601463df33"
+
+[[files]]
+file = "minecraft/jre25/legal/java.security.jgss/LICENSE"
+hash = "4b9abebc4338048a7c2dc184e9f800deb349366bdf28eb23c2677a77b4c87726"
+
+[[files]]
+file = "minecraft/jre25/legal/java.security.sasl/ADDITIONAL_LICENSE_INFO"
+hash = "a69bce275ba7a3570af6579cb0f55682cd75fedfcd49e0e8e9022270c447c916"
+
+[[files]]
+file = "minecraft/jre25/legal/java.security.sasl/ASSEMBLY_EXCEPTION"
+hash = "75292f03bf23d3db7c985aecc191029b93883200721ed23ed34a2e601463df33"
+
+[[files]]
+file = "minecraft/jre25/legal/java.security.sasl/LICENSE"
+hash = "4b9abebc4338048a7c2dc184e9f800deb349366bdf28eb23c2677a77b4c87726"
+
+[[files]]
+file = "minecraft/jre25/legal/java.smartcardio/ADDITIONAL_LICENSE_INFO"
+hash = "a69bce275ba7a3570af6579cb0f55682cd75fedfcd49e0e8e9022270c447c916"
+
+[[files]]
+file = "minecraft/jre25/legal/java.smartcardio/ASSEMBLY_EXCEPTION"
+hash = "75292f03bf23d3db7c985aecc191029b93883200721ed23ed34a2e601463df33"
+
+[[files]]
+file = "minecraft/jre25/legal/java.smartcardio/LICENSE"
+hash = "4b9abebc4338048a7c2dc184e9f800deb349366bdf28eb23c2677a77b4c87726"
+
+[[files]]
+file = "minecraft/jre25/legal/java.smartcardio/pcsclite.md"
+hash = "3ad4c89f51e0c79170a6e5eaaae1429db25745dbe5a84fc61804caeec2fec54f"
+
+[[files]]
+file = "minecraft/jre25/legal/java.sql.rowset/ADDITIONAL_LICENSE_INFO"
+hash = "a69bce275ba7a3570af6579cb0f55682cd75fedfcd49e0e8e9022270c447c916"
+
+[[files]]
+file = "minecraft/jre25/legal/java.sql.rowset/ASSEMBLY_EXCEPTION"
+hash = "75292f03bf23d3db7c985aecc191029b93883200721ed23ed34a2e601463df33"
+
+[[files]]
+file = "minecraft/jre25/legal/java.sql.rowset/LICENSE"
+hash = "4b9abebc4338048a7c2dc184e9f800deb349366bdf28eb23c2677a77b4c87726"
+
+[[files]]
+file = "minecraft/jre25/legal/java.sql/ADDITIONAL_LICENSE_INFO"
+hash = "a69bce275ba7a3570af6579cb0f55682cd75fedfcd49e0e8e9022270c447c916"
+
+[[files]]
+file = "minecraft/jre25/legal/java.sql/ASSEMBLY_EXCEPTION"
+hash = "75292f03bf23d3db7c985aecc191029b93883200721ed23ed34a2e601463df33"
+
+[[files]]
+file = "minecraft/jre25/legal/java.sql/LICENSE"
+hash = "4b9abebc4338048a7c2dc184e9f800deb349366bdf28eb23c2677a77b4c87726"
+
+[[files]]
+file = "minecraft/jre25/legal/java.transaction.xa/ADDITIONAL_LICENSE_INFO"
+hash = "a69bce275ba7a3570af6579cb0f55682cd75fedfcd49e0e8e9022270c447c916"
+
+[[files]]
+file = "minecraft/jre25/legal/java.transaction.xa/ASSEMBLY_EXCEPTION"
+hash = "75292f03bf23d3db7c985aecc191029b93883200721ed23ed34a2e601463df33"
+
+[[files]]
+file = "minecraft/jre25/legal/java.transaction.xa/LICENSE"
+hash = "4b9abebc4338048a7c2dc184e9f800deb349366bdf28eb23c2677a77b4c87726"
+
+[[files]]
+file = "minecraft/jre25/legal/java.xml.crypto/ADDITIONAL_LICENSE_INFO"
+hash = "a69bce275ba7a3570af6579cb0f55682cd75fedfcd49e0e8e9022270c447c916"
+
+[[files]]
+file = "minecraft/jre25/legal/java.xml.crypto/ASSEMBLY_EXCEPTION"
+hash = "75292f03bf23d3db7c985aecc191029b93883200721ed23ed34a2e601463df33"
+
+[[files]]
+file = "minecraft/jre25/legal/java.xml.crypto/LICENSE"
+hash = "4b9abebc4338048a7c2dc184e9f800deb349366bdf28eb23c2677a77b4c87726"
+
+[[files]]
+file = "minecraft/jre25/legal/java.xml.crypto/santuario.md"
+hash = "d08690d25f660f145c73365d260ed522cd0aace8a0e1396706551b7a1ae8c9a3"
+
+[[files]]
+file = "minecraft/jre25/legal/java.xml/ADDITIONAL_LICENSE_INFO"
+hash = "a69bce275ba7a3570af6579cb0f55682cd75fedfcd49e0e8e9022270c447c916"
+
+[[files]]
+file = "minecraft/jre25/legal/java.xml/ASSEMBLY_EXCEPTION"
+hash = "75292f03bf23d3db7c985aecc191029b93883200721ed23ed34a2e601463df33"
+
+[[files]]
+file = "minecraft/jre25/legal/java.xml/LICENSE"
+hash = "4b9abebc4338048a7c2dc184e9f800deb349366bdf28eb23c2677a77b4c87726"
+
+[[files]]
+file = "minecraft/jre25/legal/java.xml/bcel.md"
+hash = "cd578186ad93de46cca29ec8ace2b11f9da751987f3f140e6095c528596cc8c1"
+
+[[files]]
+file = "minecraft/jre25/legal/java.xml/dom.md"
+hash = "6686e8877667584a3a7c07344baadca1a03e29f677162d87c3c0811e990d1148"
+
+[[files]]
+file = "minecraft/jre25/legal/java.xml/jcup.md"
+hash = "8d5dcfdf50455a3c34c753a98f21e953248af200415a9084e3f102cb6c43b8bf"
+
+[[files]]
+file = "minecraft/jre25/legal/java.xml/schema10part1.md"
+hash = "b220f891e5bfa3aa4b2a4b34dfab53a291553c2ae0fd0b15a4cb1116d4e97770"
+
+[[files]]
+file = "minecraft/jre25/legal/java.xml/schema10part2.md"
+hash = "2350e35e91866d5ee5bd7ee7c303b3e424bbca335d36c71452588aac494eaa3e"
+
+[[files]]
+file = "minecraft/jre25/legal/java.xml/xalan.md"
+hash = "02bd013fc3f438dbb8fa41fa57888177e015efa6431d37fce6e794c6f353a6a1"
+
+[[files]]
+file = "minecraft/jre25/legal/java.xml/xerces.md"
+hash = "4a6bf6b367193ee68681cb2d9fed30ffc5d62dd2d477bd62e0271707d71b3244"
+
+[[files]]
+file = "minecraft/jre25/legal/java.xml/xhtml10.md"
+hash = "9a5cde47073ca80cf59127891420f4aed603eb65070738ad027bb19e76fb9319"
+
+[[files]]
+file = "minecraft/jre25/legal/java.xml/xhtml10schema.md"
+hash = "7bc51d884aaae6ef27551ee78d404ba3116356790da3d06b665679eb2e1cc002"
+
+[[files]]
+file = "minecraft/jre25/legal/java.xml/xhtml11.md"
+hash = "4f99a390896f0f55a0b78376de89bfd2ac845713de85e67e37f884b77e0c3122"
+
+[[files]]
+file = "minecraft/jre25/legal/java.xml/xhtml11schema.md"
+hash = "8cd69b1392e286538008f4cb003f85caea3a375c619e697813d820b69857cf74"
+
+[[files]]
+file = "minecraft/jre25/legal/java.xml/xmlspec.md"
+hash = "afec263bf5dc67697ee33734ee243f86a878161335ef6298273e4041673b0544"
+
+[[files]]
+file = "minecraft/jre25/legal/java.xml/xmlxsd.md"
+hash = "498a5fec63509a8f3949983bb6878ac5c95aaf1d5e3679272d93314371aa0211"
+
+[[files]]
+file = "minecraft/jre25/legal/jdk.accessibility/ADDITIONAL_LICENSE_INFO"
+hash = "a69bce275ba7a3570af6579cb0f55682cd75fedfcd49e0e8e9022270c447c916"
+
+[[files]]
+file = "minecraft/jre25/legal/jdk.accessibility/ASSEMBLY_EXCEPTION"
+hash = "75292f03bf23d3db7c985aecc191029b93883200721ed23ed34a2e601463df33"
+
+[[files]]
+file = "minecraft/jre25/legal/jdk.accessibility/LICENSE"
+hash = "4b9abebc4338048a7c2dc184e9f800deb349366bdf28eb23c2677a77b4c87726"
+
+[[files]]
+file = "minecraft/jre25/legal/jdk.charsets/ADDITIONAL_LICENSE_INFO"
+hash = "a69bce275ba7a3570af6579cb0f55682cd75fedfcd49e0e8e9022270c447c916"
+
+[[files]]
+file = "minecraft/jre25/legal/jdk.charsets/ASSEMBLY_EXCEPTION"
+hash = "75292f03bf23d3db7c985aecc191029b93883200721ed23ed34a2e601463df33"
+
+[[files]]
+file = "minecraft/jre25/legal/jdk.charsets/LICENSE"
+hash = "4b9abebc4338048a7c2dc184e9f800deb349366bdf28eb23c2677a77b4c87726"
+
+[[files]]
+file = "minecraft/jre25/legal/jdk.crac/ADDITIONAL_LICENSE_INFO"
+hash = "a69bce275ba7a3570af6579cb0f55682cd75fedfcd49e0e8e9022270c447c916"
+
+[[files]]
+file = "minecraft/jre25/legal/jdk.crac/ASSEMBLY_EXCEPTION"
+hash = "75292f03bf23d3db7c985aecc191029b93883200721ed23ed34a2e601463df33"
+
+[[files]]
+file = "minecraft/jre25/legal/jdk.crac/LICENSE"
+hash = "4b9abebc4338048a7c2dc184e9f800deb349366bdf28eb23c2677a77b4c87726"
+
+[[files]]
+file = "minecraft/jre25/legal/jdk.crypto.cryptoki/ADDITIONAL_LICENSE_INFO"
+hash = "a69bce275ba7a3570af6579cb0f55682cd75fedfcd49e0e8e9022270c447c916"
+
+[[files]]
+file = "minecraft/jre25/legal/jdk.crypto.cryptoki/ASSEMBLY_EXCEPTION"
+hash = "75292f03bf23d3db7c985aecc191029b93883200721ed23ed34a2e601463df33"
+
+[[files]]
+file = "minecraft/jre25/legal/jdk.crypto.cryptoki/LICENSE"
+hash = "4b9abebc4338048a7c2dc184e9f800deb349366bdf28eb23c2677a77b4c87726"
+
+[[files]]
+file = "minecraft/jre25/legal/jdk.crypto.cryptoki/pkcs11cryptotoken.md"
+hash = "1f36ff1342a581142c858f90064e20633d43529ac82adb85345bd902a14e18b2"
+
+[[files]]
+file = "minecraft/jre25/legal/jdk.crypto.cryptoki/pkcs11wrapper.md"
+hash = "371974b1fca3744a3892c7ee1fcc593b8b4281fc218f4cafd2f709e9df5fd81d"
+
+[[files]]
+file = "minecraft/jre25/legal/jdk.dynalink/ADDITIONAL_LICENSE_INFO"
+hash = "a69bce275ba7a3570af6579cb0f55682cd75fedfcd49e0e8e9022270c447c916"
+
+[[files]]
+file = "minecraft/jre25/legal/jdk.dynalink/ASSEMBLY_EXCEPTION"
+hash = "75292f03bf23d3db7c985aecc191029b93883200721ed23ed34a2e601463df33"
+
+[[files]]
+file = "minecraft/jre25/legal/jdk.dynalink/LICENSE"
+hash = "4b9abebc4338048a7c2dc184e9f800deb349366bdf28eb23c2677a77b4c87726"
+
+[[files]]
+file = "minecraft/jre25/legal/jdk.dynalink/dynalink.md"
+hash = "17312591cabee3ef6c34ed8897d92e4e361ba9cea41ec00dcd61a322a8fc2cdb"
+
+[[files]]
+file = "minecraft/jre25/legal/jdk.graal.compiler.management/ADDITIONAL_LICENSE_INFO"
+hash = "a69bce275ba7a3570af6579cb0f55682cd75fedfcd49e0e8e9022270c447c916"
+
+[[files]]
+file = "minecraft/jre25/legal/jdk.graal.compiler.management/ASSEMBLY_EXCEPTION"
+hash = "75292f03bf23d3db7c985aecc191029b93883200721ed23ed34a2e601463df33"
+
+[[files]]
+file = "minecraft/jre25/legal/jdk.graal.compiler.management/LICENSE"
+hash = "4b9abebc4338048a7c2dc184e9f800deb349366bdf28eb23c2677a77b4c87726"
+
+[[files]]
+file = "minecraft/jre25/legal/jdk.graal.compiler/ADDITIONAL_LICENSE_INFO"
+hash = "a69bce275ba7a3570af6579cb0f55682cd75fedfcd49e0e8e9022270c447c916"
+
+[[files]]
+file = "minecraft/jre25/legal/jdk.graal.compiler/ASSEMBLY_EXCEPTION"
+hash = "75292f03bf23d3db7c985aecc191029b93883200721ed23ed34a2e601463df33"
+
+[[files]]
+file = "minecraft/jre25/legal/jdk.graal.compiler/LICENSE"
+hash = "4b9abebc4338048a7c2dc184e9f800deb349366bdf28eb23c2677a77b4c87726"
+
+[[files]]
+file = "minecraft/jre25/legal/jdk.httpserver/ADDITIONAL_LICENSE_INFO"
+hash = "a69bce275ba7a3570af6579cb0f55682cd75fedfcd49e0e8e9022270c447c916"
+
+[[files]]
+file = "minecraft/jre25/legal/jdk.httpserver/ASSEMBLY_EXCEPTION"
+hash = "75292f03bf23d3db7c985aecc191029b93883200721ed23ed34a2e601463df33"
+
+[[files]]
+file = "minecraft/jre25/legal/jdk.httpserver/LICENSE"
+hash = "4b9abebc4338048a7c2dc184e9f800deb349366bdf28eb23c2677a77b4c87726"
+
+[[files]]
+file = "minecraft/jre25/legal/jdk.incubator.vector/ADDITIONAL_LICENSE_INFO"
+hash = "a69bce275ba7a3570af6579cb0f55682cd75fedfcd49e0e8e9022270c447c916"
+
+[[files]]
+file = "minecraft/jre25/legal/jdk.incubator.vector/ASSEMBLY_EXCEPTION"
+hash = "75292f03bf23d3db7c985aecc191029b93883200721ed23ed34a2e601463df33"
+
+[[files]]
+file = "minecraft/jre25/legal/jdk.incubator.vector/LICENSE"
+hash = "4b9abebc4338048a7c2dc184e9f800deb349366bdf28eb23c2677a77b4c87726"
+
+[[files]]
+file = "minecraft/jre25/legal/jdk.incubator.vector/sleef.md"
+hash = "ee27da65f6a1025fe5a4dc190c3ec3301876e4c0b4b37a7dcf0d104091d83191"
+
+[[files]]
+file = "minecraft/jre25/legal/jdk.internal.vm.ci/ADDITIONAL_LICENSE_INFO"
+hash = "a69bce275ba7a3570af6579cb0f55682cd75fedfcd49e0e8e9022270c447c916"
+
+[[files]]
+file = "minecraft/jre25/legal/jdk.internal.vm.ci/ASSEMBLY_EXCEPTION"
+hash = "75292f03bf23d3db7c985aecc191029b93883200721ed23ed34a2e601463df33"
+
+[[files]]
+file = "minecraft/jre25/legal/jdk.internal.vm.ci/LICENSE"
+hash = "4b9abebc4338048a7c2dc184e9f800deb349366bdf28eb23c2677a77b4c87726"
+
+[[files]]
+file = "minecraft/jre25/legal/jdk.jdwp.agent/ADDITIONAL_LICENSE_INFO"
+hash = "a69bce275ba7a3570af6579cb0f55682cd75fedfcd49e0e8e9022270c447c916"
+
+[[files]]
+file = "minecraft/jre25/legal/jdk.jdwp.agent/ASSEMBLY_EXCEPTION"
+hash = "75292f03bf23d3db7c985aecc191029b93883200721ed23ed34a2e601463df33"
+
+[[files]]
+file = "minecraft/jre25/legal/jdk.jdwp.agent/LICENSE"
+hash = "4b9abebc4338048a7c2dc184e9f800deb349366bdf28eb23c2677a77b4c87726"
+
+[[files]]
+file = "minecraft/jre25/legal/jdk.jfr/ADDITIONAL_LICENSE_INFO"
+hash = "a69bce275ba7a3570af6579cb0f55682cd75fedfcd49e0e8e9022270c447c916"
+
+[[files]]
+file = "minecraft/jre25/legal/jdk.jfr/ASSEMBLY_EXCEPTION"
+hash = "75292f03bf23d3db7c985aecc191029b93883200721ed23ed34a2e601463df33"
+
+[[files]]
+file = "minecraft/jre25/legal/jdk.jfr/LICENSE"
+hash = "4b9abebc4338048a7c2dc184e9f800deb349366bdf28eb23c2677a77b4c87726"
+
+[[files]]
+file = "minecraft/jre25/legal/jdk.jsobject/ADDITIONAL_LICENSE_INFO"
+hash = "a69bce275ba7a3570af6579cb0f55682cd75fedfcd49e0e8e9022270c447c916"
+
+[[files]]
+file = "minecraft/jre25/legal/jdk.jsobject/ASSEMBLY_EXCEPTION"
+hash = "75292f03bf23d3db7c985aecc191029b93883200721ed23ed34a2e601463df33"
+
+[[files]]
+file = "minecraft/jre25/legal/jdk.jsobject/LICENSE"
+hash = "4b9abebc4338048a7c2dc184e9f800deb349366bdf28eb23c2677a77b4c87726"
+
+[[files]]
+file = "minecraft/jre25/legal/jdk.localedata/ADDITIONAL_LICENSE_INFO"
+hash = "a69bce275ba7a3570af6579cb0f55682cd75fedfcd49e0e8e9022270c447c916"
+
+[[files]]
+file = "minecraft/jre25/legal/jdk.localedata/ASSEMBLY_EXCEPTION"
+hash = "75292f03bf23d3db7c985aecc191029b93883200721ed23ed34a2e601463df33"
+
+[[files]]
+file = "minecraft/jre25/legal/jdk.localedata/LICENSE"
+hash = "4b9abebc4338048a7c2dc184e9f800deb349366bdf28eb23c2677a77b4c87726"
+
+[[files]]
+file = "minecraft/jre25/legal/jdk.localedata/cldr.md"
+hash = "472e341c36efc1136860ed7a6461a2af4a53ae95d55d1126726340f5ba62b06a"
+
+[[files]]
+file = "minecraft/jre25/legal/jdk.localedata/thaidict.md"
+hash = "c326144a2351c9608fa708b5d7d3c5a3da03e82b66479b128e9db4969539824a"
+
+[[files]]
+file = "minecraft/jre25/legal/jdk.management.agent/ADDITIONAL_LICENSE_INFO"
+hash = "a69bce275ba7a3570af6579cb0f55682cd75fedfcd49e0e8e9022270c447c916"
+
+[[files]]
+file = "minecraft/jre25/legal/jdk.management.agent/ASSEMBLY_EXCEPTION"
+hash = "75292f03bf23d3db7c985aecc191029b93883200721ed23ed34a2e601463df33"
+
+[[files]]
+file = "minecraft/jre25/legal/jdk.management.agent/LICENSE"
+hash = "4b9abebc4338048a7c2dc184e9f800deb349366bdf28eb23c2677a77b4c87726"
+
+[[files]]
+file = "minecraft/jre25/legal/jdk.management.jfr/ADDITIONAL_LICENSE_INFO"
+hash = "a69bce275ba7a3570af6579cb0f55682cd75fedfcd49e0e8e9022270c447c916"
+
+[[files]]
+file = "minecraft/jre25/legal/jdk.management.jfr/ASSEMBLY_EXCEPTION"
+hash = "75292f03bf23d3db7c985aecc191029b93883200721ed23ed34a2e601463df33"
+
+[[files]]
+file = "minecraft/jre25/legal/jdk.management.jfr/LICENSE"
+hash = "4b9abebc4338048a7c2dc184e9f800deb349366bdf28eb23c2677a77b4c87726"
+
+[[files]]
+file = "minecraft/jre25/legal/jdk.management/ADDITIONAL_LICENSE_INFO"
+hash = "a69bce275ba7a3570af6579cb0f55682cd75fedfcd49e0e8e9022270c447c916"
+
+[[files]]
+file = "minecraft/jre25/legal/jdk.management/ASSEMBLY_EXCEPTION"
+hash = "75292f03bf23d3db7c985aecc191029b93883200721ed23ed34a2e601463df33"
+
+[[files]]
+file = "minecraft/jre25/legal/jdk.management/LICENSE"
+hash = "4b9abebc4338048a7c2dc184e9f800deb349366bdf28eb23c2677a77b4c87726"
+
+[[files]]
+file = "minecraft/jre25/legal/jdk.naming.dns/ADDITIONAL_LICENSE_INFO"
+hash = "a69bce275ba7a3570af6579cb0f55682cd75fedfcd49e0e8e9022270c447c916"
+
+[[files]]
+file = "minecraft/jre25/legal/jdk.naming.dns/ASSEMBLY_EXCEPTION"
+hash = "75292f03bf23d3db7c985aecc191029b93883200721ed23ed34a2e601463df33"
+
+[[files]]
+file = "minecraft/jre25/legal/jdk.naming.dns/LICENSE"
+hash = "4b9abebc4338048a7c2dc184e9f800deb349366bdf28eb23c2677a77b4c87726"
+
+[[files]]
+file = "minecraft/jre25/legal/jdk.naming.rmi/ADDITIONAL_LICENSE_INFO"
+hash = "a69bce275ba7a3570af6579cb0f55682cd75fedfcd49e0e8e9022270c447c916"
+
+[[files]]
+file = "minecraft/jre25/legal/jdk.naming.rmi/ASSEMBLY_EXCEPTION"
+hash = "75292f03bf23d3db7c985aecc191029b93883200721ed23ed34a2e601463df33"
+
+[[files]]
+file = "minecraft/jre25/legal/jdk.naming.rmi/LICENSE"
+hash = "4b9abebc4338048a7c2dc184e9f800deb349366bdf28eb23c2677a77b4c87726"
+
+[[files]]
+file = "minecraft/jre25/legal/jdk.net/ADDITIONAL_LICENSE_INFO"
+hash = "a69bce275ba7a3570af6579cb0f55682cd75fedfcd49e0e8e9022270c447c916"
+
+[[files]]
+file = "minecraft/jre25/legal/jdk.net/ASSEMBLY_EXCEPTION"
+hash = "75292f03bf23d3db7c985aecc191029b93883200721ed23ed34a2e601463df33"
+
+[[files]]
+file = "minecraft/jre25/legal/jdk.net/LICENSE"
+hash = "4b9abebc4338048a7c2dc184e9f800deb349366bdf28eb23c2677a77b4c87726"
+
+[[files]]
+file = "minecraft/jre25/legal/jdk.nio.mapmode/ADDITIONAL_LICENSE_INFO"
+hash = "a69bce275ba7a3570af6579cb0f55682cd75fedfcd49e0e8e9022270c447c916"
+
+[[files]]
+file = "minecraft/jre25/legal/jdk.nio.mapmode/ASSEMBLY_EXCEPTION"
+hash = "75292f03bf23d3db7c985aecc191029b93883200721ed23ed34a2e601463df33"
+
+[[files]]
+file = "minecraft/jre25/legal/jdk.nio.mapmode/LICENSE"
+hash = "4b9abebc4338048a7c2dc184e9f800deb349366bdf28eb23c2677a77b4c87726"
+
+[[files]]
+file = "minecraft/jre25/legal/jdk.sctp/ADDITIONAL_LICENSE_INFO"
+hash = "a69bce275ba7a3570af6579cb0f55682cd75fedfcd49e0e8e9022270c447c916"
+
+[[files]]
+file = "minecraft/jre25/legal/jdk.sctp/ASSEMBLY_EXCEPTION"
+hash = "75292f03bf23d3db7c985aecc191029b93883200721ed23ed34a2e601463df33"
+
+[[files]]
+file = "minecraft/jre25/legal/jdk.sctp/LICENSE"
+hash = "4b9abebc4338048a7c2dc184e9f800deb349366bdf28eb23c2677a77b4c87726"
+
+[[files]]
+file = "minecraft/jre25/legal/jdk.security.auth/ADDITIONAL_LICENSE_INFO"
+hash = "a69bce275ba7a3570af6579cb0f55682cd75fedfcd49e0e8e9022270c447c916"
+
+[[files]]
+file = "minecraft/jre25/legal/jdk.security.auth/ASSEMBLY_EXCEPTION"
+hash = "75292f03bf23d3db7c985aecc191029b93883200721ed23ed34a2e601463df33"
+
+[[files]]
+file = "minecraft/jre25/legal/jdk.security.auth/LICENSE"
+hash = "4b9abebc4338048a7c2dc184e9f800deb349366bdf28eb23c2677a77b4c87726"
+
+[[files]]
+file = "minecraft/jre25/legal/jdk.security.jgss/ADDITIONAL_LICENSE_INFO"
+hash = "a69bce275ba7a3570af6579cb0f55682cd75fedfcd49e0e8e9022270c447c916"
+
+[[files]]
+file = "minecraft/jre25/legal/jdk.security.jgss/ASSEMBLY_EXCEPTION"
+hash = "75292f03bf23d3db7c985aecc191029b93883200721ed23ed34a2e601463df33"
+
+[[files]]
+file = "minecraft/jre25/legal/jdk.security.jgss/LICENSE"
+hash = "4b9abebc4338048a7c2dc184e9f800deb349366bdf28eb23c2677a77b4c87726"
+
+[[files]]
+file = "minecraft/jre25/legal/jdk.unsupported/ADDITIONAL_LICENSE_INFO"
+hash = "a69bce275ba7a3570af6579cb0f55682cd75fedfcd49e0e8e9022270c447c916"
+
+[[files]]
+file = "minecraft/jre25/legal/jdk.unsupported/ASSEMBLY_EXCEPTION"
+hash = "75292f03bf23d3db7c985aecc191029b93883200721ed23ed34a2e601463df33"
+
+[[files]]
+file = "minecraft/jre25/legal/jdk.unsupported/LICENSE"
+hash = "4b9abebc4338048a7c2dc184e9f800deb349366bdf28eb23c2677a77b4c87726"
+
+[[files]]
+file = "minecraft/jre25/legal/jdk.xml.dom/ADDITIONAL_LICENSE_INFO"
+hash = "a69bce275ba7a3570af6579cb0f55682cd75fedfcd49e0e8e9022270c447c916"
+
+[[files]]
+file = "minecraft/jre25/legal/jdk.xml.dom/ASSEMBLY_EXCEPTION"
+hash = "75292f03bf23d3db7c985aecc191029b93883200721ed23ed34a2e601463df33"
+
+[[files]]
+file = "minecraft/jre25/legal/jdk.xml.dom/LICENSE"
+hash = "4b9abebc4338048a7c2dc184e9f800deb349366bdf28eb23c2677a77b4c87726"
+
+[[files]]
+file = "minecraft/jre25/legal/jdk.zipfs/ADDITIONAL_LICENSE_INFO"
+hash = "a69bce275ba7a3570af6579cb0f55682cd75fedfcd49e0e8e9022270c447c916"
+
+[[files]]
+file = "minecraft/jre25/legal/jdk.zipfs/ASSEMBLY_EXCEPTION"
+hash = "75292f03bf23d3db7c985aecc191029b93883200721ed23ed34a2e601463df33"
+
+[[files]]
+file = "minecraft/jre25/legal/jdk.zipfs/LICENSE"
+hash = "4b9abebc4338048a7c2dc184e9f800deb349366bdf28eb23c2677a77b4c87726"
+
+[[files]]
+file = "minecraft/jre25/lib/classlist"
+hash = "1c78c9354b44e8dfb9b714a48efdba25f82b923d6af291b92121771c8fa6bd23"
+
+[[files]]
+file = "minecraft/jre25/lib/criu"
+hash = "a9956236285a06adc28a2a0cb80636165a09ef9167b59169b053fc33068048df"
+
+[[files]]
+file = "minecraft/jre25/lib/criuhelper"
+hash = "eda7c9697230039a1bb41491cd060e519487de6b6039d8524d216979e5b35bd7"
+
+[[files]]
+file = "minecraft/jre25/lib/jexec"
+hash = "537cf2ff22f6799d1f9cdc1e14c94aff8ed6eee897c4aca929ed191b8259c280"
+
+[[files]]
+file = "minecraft/jre25/lib/jfr/default.jfc"
+hash = "26f2d7bf2f8473b3849f9480629eee695edf59fd667da838890a22919237718a"
+
+[[files]]
+file = "minecraft/jre25/lib/jfr/profile.jfc"
+hash = "3e2c847608b1e7d182337f56bbf75b6a026ba4e9634b398bd92aec865e9ea8a7"
+
+[[files]]
+file = "minecraft/jre25/lib/jrt-fs.jar"
+hash = "d6a1c299813bb062e3f94839733834e35708e54fa02d3d444f5987814ba651f9"
+
+[[files]]
+file = "minecraft/jre25/lib/jspawnhelper"
+hash = "89f27a61254b41af13841d5e563fb7e1c412f9e9aa6fe5d46642d4f1e1f0cafa"
+
+[[files]]
+file = "minecraft/jre25/lib/jvm.cfg"
+hash = "aa9efb969444c1484e29adecab55a122458090616e766b2f1230ef05bc3867e0"
+
+[[files]]
+file = "minecraft/jre25/lib/libawt.so"
+hash = "99158bf5b868bd1d9cc8f34b07abc443bb678156090f9664ea30d2fff41d74aa"
+
+[[files]]
+file = "minecraft/jre25/lib/libawt_headless.so"
+hash = "bdc90de81cf01f0cdbe765f91939a3aa0de0e56d82daf2f9e72b5ee16f49ec4c"
+
+[[files]]
+file = "minecraft/jre25/lib/libawt_xawt.so"
+hash = "9e5834e4ed3d05c339869a3b4ba287a07072bb0860d7acc6f41f7479e6a0da7b"
+
+[[files]]
+file = "minecraft/jre25/lib/libcrcommon.so"
+hash = "56cf0e96afda694b8462338ac7756fee5e9e4a623423e95725f7198dd11bd015"
+
+[[files]]
+file = "minecraft/jre25/lib/libcriuengine.so"
+hash = "e1d18471a914ca642d0b50c3044d122ff9751f67431adac7eaf402015fec3bd0"
+
+[[files]]
+file = "minecraft/jre25/lib/libdt_socket.so"
+hash = "1482ca71a1370e0211b582d4d987926379257246304c7fbc3540f0db94487155"
+
+[[files]]
+file = "minecraft/jre25/lib/libextnet.so"
+hash = "bd293fedf194fd41849a13c1b57e81edc8d4c9e71b81dceff8d23cf66071e6bc"
+
+[[files]]
+file = "minecraft/jre25/lib/libfontmanager.so"
+hash = "70a44adb31e16ad265af3d4d652c16f093d6a8242064f391992af9508813f057"
+
+[[files]]
+file = "minecraft/jre25/lib/libfreetype.so"
+hash = "24f913a0f6c99889639b766eaa981a5e1b92312b78752137afe5e479b1dc2e52"
+
+[[files]]
+file = "minecraft/jre25/lib/libinstrument.so"
+hash = "b120886b911c62866862433a2d82b22cec30455b0e77d42c1c2d199182dd6b1f"
+
+[[files]]
+file = "minecraft/jre25/lib/libj2gss.so"
+hash = "16a3f17530b09a185caea849ac2221e85e5bbea5f965dca94e5ad610f42f0c4b"
+
+[[files]]
+file = "minecraft/jre25/lib/libj2pcsc.so"
+hash = "3762ccbd5cef45cbad74a41f66fd0ee05d7d9aadd283a2ca6b8f2d70c6acb5b7"
+
+[[files]]
+file = "minecraft/jre25/lib/libj2pkcs11.so"
+hash = "da605a2f10ec158d6e983732ea0494a936ad92661758ed27c964d05d5fc73ede"
+
+[[files]]
+file = "minecraft/jre25/lib/libjaas.so"
+hash = "f77fdcc033096459b32a6dfb760031dba52606af287d81011622ed06b8a9590b"
+
+[[files]]
+file = "minecraft/jre25/lib/libjava.so"
+hash = "cf9195122f48e211fd66d9df061dd697ae3c22b15fd3ad2ea78e96f428ab522f"
+
+[[files]]
+file = "minecraft/jre25/lib/libjavajpeg.so"
+hash = "eb757473dcd534a6581b97ea3d37f56edd024238ea27adde0124a8b167219fb4"
+
+[[files]]
+file = "minecraft/jre25/lib/libjawt.so"
+hash = "2faf47b7698c0019968079c926f08ebdd1f47f1312766dab7abe5253227faf18"
+
+[[files]]
+file = "minecraft/jre25/lib/libjdwp.so"
+hash = "11c6b640ea3ea38f749d13a5282770d9148752e0698aef218009fdd4cf363008"
+
+[[files]]
+file = "minecraft/jre25/lib/libjimage.so"
+hash = "43478eae31344ff3242e83a1e9c59ab93e4f87ffb1e2041b2f8c152373f35a78"
+
+[[files]]
+file = "minecraft/jre25/lib/libjli.so"
+hash = "561e7ba892a8bb496bb9e109833a52b41251789557e120aac512cede803dd729"
+
+[[files]]
+file = "minecraft/jre25/lib/libjsig.so"
+hash = "4aa5da69b1e457a3b4bda85bbc7ee111a46a8358455f75406b0f160447777174"
+
+[[files]]
+file = "minecraft/jre25/lib/libjsound.so"
+hash = "b100f55c0538df15cff8851cb75630fba998c4097781b1feea5abce3ab173ff7"
+
+[[files]]
+file = "minecraft/jre25/lib/libjsvml.so"
+hash = "cd39a86b60f6b4411d0406455de7752d9f5ef13d18e9a771ceb5c6ece255d6ed"
+
+[[files]]
+file = "minecraft/jre25/lib/liblcms.so"
+hash = "3f7259805ea92276b99afc6b871e748394379167d01822d5ef3cbc8e1a42a5ca"
+
+[[files]]
+file = "minecraft/jre25/lib/libmanagement.so"
+hash = "4be00748003ff3ababc482536fe8f4aabb31a854911ff5ef607fc4bdc60d4e31"
+
+[[files]]
+file = "minecraft/jre25/lib/libmanagement_agent.so"
+hash = "ccfcf079d13c825227b48fb553d2c15da24296689717a22c815eb44f3e5e3e84"
+
+[[files]]
+file = "minecraft/jre25/lib/libmanagement_ext.so"
+hash = "d69ef9f46f0e61bb7ad6a4627e5035460d8dae408964e4891defa7d9b099d0ac"
+
+[[files]]
+file = "minecraft/jre25/lib/libmlib_image.so"
+hash = "6485b2cfd6ec06d11f64afbf0f62733e6354df0cf7b7f1be9a309c2effa4efd0"
+
+[[files]]
+file = "minecraft/jre25/lib/libnet.so"
+hash = "c09f6981bae1e93cc62477486228f886bd3ca0264dfcd871ad5e4dab2c1f6750"
+
+[[files]]
+file = "minecraft/jre25/lib/libnio.so"
+hash = "08fba382ac5b019d98a8ac961802c3e28660fb21ec9e6878dba387d173f801e1"
+
+[[files]]
+file = "minecraft/jre25/lib/libprefs.so"
+hash = "2e0030e0cce0dba40e5cb9281e6301b1674fdbf1025dcbd435e059e004707e09"
+
+[[files]]
+file = "minecraft/jre25/lib/librmi.so"
+hash = "61e8ae044f03cbd4c38dd5df412d4d6352a28e9367ad6c2a2937a38c22f4969d"
+
+[[files]]
+file = "minecraft/jre25/lib/libsctp.so"
+hash = "704bbec9f52e96b549300833f665d22390ad2588887ccf4171140180fa79cb07"
+
+[[files]]
+file = "minecraft/jre25/lib/libsimdsort.so"
+hash = "bb4e9b0bdad1a1829fad60c38ce600b4b2a9dceee6449ca5fdf7581ee1093d72"
+
+[[files]]
+file = "minecraft/jre25/lib/libsimengine.so"
+hash = "f45ca86f9758fe85f854db15dd0c2952d6e2637a669f66bc8773f3dbb151bf53"
+
+[[files]]
+file = "minecraft/jre25/lib/libsplashscreen.so"
+hash = "374605d3e83d09e20996fb7a96de7e11eee4b4d07a8de202c8dcc816acf32278"
+
+[[files]]
+file = "minecraft/jre25/lib/libsyslookup.so"
+hash = "5f7fc63a7e83209bf0e0031aba9cacbce60a7fa42c784cd357032e2e61678441"
+
+[[files]]
+file = "minecraft/jre25/lib/libverify.so"
+hash = "6f9b9d1ca5a86d850b7dbc61c1cc45ae6936263a27dedc292d15c0a4c55afc5e"
+
+[[files]]
+file = "minecraft/jre25/lib/libwarp.so"
+hash = "4359a112a3e37ec9255fc9fdcecb49fb98c34a4ac343b38d0ed50bf9ac1c025f"
+
+[[files]]
+file = "minecraft/jre25/lib/libzip.so"
+hash = "930a4a44a86fc250b83e17d85e6cc560bf443cf3318cce7d1cf4ead197cf68c0"
+
+[[files]]
+file = "minecraft/jre25/lib/modules"
+hash = "755c24031c4cc7cf379ba9e4adc32ccb95cb7ae4c25b241f9c836df215f87ecd"
+
+[[files]]
+file = "minecraft/jre25/lib/psfont.properties.ja"
+hash = "5a4bd51b969bf187ff86d94f4a71fdfbfa602762975fa3c73d264b4575f7c78f"
+
+[[files]]
+file = "minecraft/jre25/lib/psfontj2d.properties"
+hash = "cfb2f55fc4a22368567273c38f1afe3fc627ad56710a1d922ada68015710e53f"
+
+[[files]]
+file = "minecraft/jre25/lib/security/blocked.certs"
+hash = "96572f243f31c2ef81a6e627542e596f6a9295cff3c7ae095c1b595cb1457ded"
+
+[[files]]
+file = "minecraft/jre25/lib/security/cacerts"
+hash = "707312d3e8018928f53d108e4534f628cbbfad18196df1a2e72884300be1a69f"
+
+[[files]]
+file = "minecraft/jre25/lib/security/public_suffix_list.dat"
+hash = "16b42002aa6f83a7763c4cdbd399ecf738460377d447e362884495545afd60a3"
+
+[[files]]
+file = "minecraft/jre25/lib/server/classes.jsa"
+hash = "d674858e285b635407ae81c66842c89b215bc6de2c1179286dbd5dca12721e1c"
+
+[[files]]
+file = "minecraft/jre25/lib/server/classes_coh.jsa"
+hash = "d01ce1f87526b3aa85c28f2cf66670d866311f9fc12068b3585aee2a22eae410"
+
+[[files]]
+file = "minecraft/jre25/lib/server/classes_nocoops.jsa"
+hash = "fd3fc86dae21dadd5390ed3129222301de934f70da95bc49b4ddbf378188b978"
+
+[[files]]
+file = "minecraft/jre25/lib/server/classes_nocoops_coh.jsa"
+hash = "8a161fd37c832393c95bed124c29de03606b0068f395addfbca7f6c43aee0794"
+
+[[files]]
+file = "minecraft/jre25/lib/server/libjsig.so"
+hash = "4aa5da69b1e457a3b4bda85bbc7ee111a46a8358455f75406b0f160447777174"
+
+[[files]]
+file = "minecraft/jre25/lib/server/libjvm.so"
+hash = "3aa15460e5dd0fbf6f6334572a9f682e05bf7af62c3582dee6744f2c0a0e4878"
+
+[[files]]
+file = "minecraft/jre25/lib/tzdb.dat"
+hash = "36cf71e63ce2816fe4456e9195e6c27fa7c9cd431c89ba762eba394ec2c7a1e3"
+
+[[files]]
+file = "minecraft/jre25/release"
+hash = "85f30f9418ba974baf634ff80b8d9016766586f94462fef68a57f74aa7548225"
 
 [[files]]
 file = "mmc-pack.json"
@@ -57,22 +1169,22 @@ metafile = true
 
 [[files]]
 file = "mods/celeritas-forge.pw.toml"
-hash = "11dc0dad7f22a03843ccaf2182b7555cf8f8ee90cac4ec2f1bd54c8343db672c"
+hash = "c62c007c5e63cf22abc3a67b67704888ab00658efe853fa1df490e91279a1e64"
 metafile = true
 
 [[files]]
 file = "mods/celeritasdynamiclights.pw.toml"
-hash = "7e5ecc1ad0e5ef99a6a6b4a3cd337b0cc3f03c5cc99f7be31dede1cfa2455359"
+hash = "41b58f92fe7b02b02492c16db56b60025af92f424d4d44b524521a9a5a84b226"
 metafile = true
 
 [[files]]
 file = "mods/celeritasextra.pw.toml"
-hash = "a4e0391ef7106b37292d89fcda2eb2ec3452b2a15e5a4cf94b8d93eb258aa60d"
+hash = "219475538e56bd4cc992a0c72d09bbe18b812e05a04b9d01dcc98e69c89b4ba2"
 metafile = true
 
 [[files]]
 file = "mods/celeritasleafculling.pw.toml"
-hash = "a55508f4b47139d72313e0a62d7aa596320b126bf74a20ac4bccff2d26196267"
+hash = "7b1f8492e3b1016b30e161d2dc700a96cf0511c26cb73dd6d43aa920786c9b6e"
 metafile = true
 
 [[files]]
@@ -308,16 +1420,6 @@ metafile = true
 [[files]]
 file = "mods/openblocks-elevator.pw.toml"
 hash = "3431051cce65c011bd7cd75412ad676ada9353851d7383199276faf34b5f3d6f"
-metafile = true
-
-[[files]]
-file = "mods/optifine.pw.toml"
-hash = "9e36a2b9da4920b9551158b5d1eff3266eac61155736dfadb21698eeb0434cda"
-metafile = true
-
-[[files]]
-file = "mods/optinotfine.pw.toml"
-hash = "b9d15ea6b9d098b3f2a939343b0c8ffa35b0a41dd05862d290993e4f1396b3df"
 metafile = true
 
 [[files]]
