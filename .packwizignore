@@ -6,3 +6,5 @@ AGENTS.md
 minecraft/jre25/
 release/
 instance.cfg
+mmc-pack.json
+cleanroom-version.txt
