@@ -33,19 +33,21 @@ jobs:
           NEW_VER="${{ steps.latest.outputs.tag }}"
           echo "Updating Cleanroom: ${{ steps.current.outputs.version }} → $NEW_VER"
 
-          # Download new mmc-pack.json
+          # Download new MMC instance
           curl -sL -o /tmp/cleanroom.zip \
             "https://github.com/CleanroomMC/Cleanroom/releases/download/$NEW_VER/Cleanroom-MMC-instance-$NEW_VER.zip"
           unzip -o /tmp/cleanroom.zip mmc-pack.json -d /tmp/
           cp /tmp/mmc-pack.json mmc-pack.json
 
-          # Patch version to Forge's latest to suppress false update notification
-          sed -i 's/"cachedVersion": "[^"]*"/"cachedVersion": "14.23.5.2860"/' mmc-pack.json
-          sed -i 's/"version": "[^"]*"/"version": "14.23.5.2860"/' mmc-pack.json
+          # Remove version patch — keep Cleanroom's real version (Prism needs it)
+          # sed lines removed: pack.toml keeps forge = "14.23.5.2860" for packwiz
 
-          # Update packwiz hash
-          HASH=$(sha256sum mmc-pack.json | cut -d' ' -f1)
-          sed -i "s/hash = \".*\"/hash = \"$HASH\"/" mmc-pack.json.pw.toml
+          # Extract and update patches/ from the official instance
+          unzip -o /tmp/cleanroom.zip "patches/*" -d /tmp/cleanroom_patches/
+          cp -rf /tmp/cleanroom_patches/patches/* patches/
+
+          # Update packwiz metadata + refresh index
+          ./packwiz refresh
 
           # Store new Cleanroom version
           echo "$NEW_VER" > cleanroom-version.txt
@@ -53,6 +55,6 @@ jobs:
           # Commit changes (no zip builds — only repo files)
           git config user.name "github-actions"
           git config user.email "actions@github.com"
-          git add mmc-pack.json mmc-pack.json.pw.toml cleanroom-version.txt
+          git add mmc-pack.json mmc-pack.json.pw.toml patches/ cleanroom-version.txt index.toml pack.toml
           git commit -m "Update Cleanroom to $NEW_VER"
           git push

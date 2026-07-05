@@ -1,18 +1,6 @@
 hash-format = "sha256"
 
 [[files]]
-file = "cleanroom-version.txt"
-hash = "a21c85012a148e7991b66e4554504941a963de12819602925b676a113d1b7976"
-
-[[files]]
-file = "instance.cfg"
-hash = "b4a617ea75a1184fcfd3352f9a5f0882c9a7a1adeded94218e1b02903b75ae7f"
-
-[[files]]
-file = "mmc-pack.json"
-hash = "d081624b806edbb1aaaf143ef540466ef9bb84650ddfe73db506e2e57ff79ba9"
-
-[[files]]
 file = "mmc-pack.json.pw.toml"
 hash = "9e065ee768512315d346c93cce9005b08347bf863360b92abe77f41e073eed9e"
 metafile = true
@@ -415,6 +403,33 @@ metafile = true
 [[files]]
 file = "mods/zume.pw.toml"
 hash = "145943325d3b47d7fb916835d8530645e3f5806c72f68f9d75183493b2c68425"
+metafile = true
+
+[[files]]
+file = "patches/net.minecraft.json"
+hash = "9921c948c9af6afd145b6cfcb48df7720ec20c5f7fa26adcdf91af302b38b792"
+
+[[files]]
+file = "patches/net.minecraft.json.pw.toml"
+hash = "681fb5030003470d52df3b6b85f91fcd9452a4d468acd2e35110a79abc06e39c"
+metafile = true
+
+[[files]]
+file = "patches/net.minecraftforge.json"
+hash = "37b6070d058afba6f979f80dfaf7baeb938ac9dc65539644cf10b295b7e501be"
+
+[[files]]
+file = "patches/net.minecraftforge.json.pw.toml"
+hash = "ba857922ba2f74b92fdc854be82d4ecc3e1eff637fb418350a5526b9c69e5ff6"
+metafile = true
+
+[[files]]
+file = "patches/org.lwjgl3.json"
+hash = "000890f0d2d5a0bf8a5d9310c3af03b8eaf88507337ac2341ec2389cc633d660"
+
+[[files]]
+file = "patches/org.lwjgl3.json.pw.toml"
+hash = "bafa1e1af6ede5d23f9dbebbddda7a099527647c5533289686674e6536c7b355"
 metafile = true
 
 [[files]]

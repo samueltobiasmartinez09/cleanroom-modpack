@@ -1,0 +1,8 @@
+name = "patches-org.lwjgl3"
+filename = "org.lwjgl3.json"
+side = "both"
+
+[download]
+url = "https://raw.githubusercontent.com/samueltobiasmartinez09/cleanroom-modpack/main/patches/org.lwjgl3.json"
+hash-format = "sha256"
+hash = "000890f0d2d5a0bf8a5d9310c3af03b8eaf88507337ac2341ec2389cc633d660"

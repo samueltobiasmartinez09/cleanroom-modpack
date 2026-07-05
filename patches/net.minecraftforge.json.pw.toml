@@ -1,0 +1,8 @@
+name = "patches-net.minecraftforge"
+filename = "net.minecraftforge.json"
+side = "both"
+
+[download]
+url = "https://raw.githubusercontent.com/samueltobiasmartinez09/cleanroom-modpack/main/patches/net.minecraftforge.json"
+hash-format = "sha256"
+hash = "37b6070d058afba6f979f80dfaf7baeb938ac9dc65539644cf10b295b7e501be"

@@ -1,0 +1,8 @@
+name = "patches-net.minecraft"
+filename = "net.minecraft.json"
+side = "both"
+
+[download]
+url = "https://raw.githubusercontent.com/samueltobiasmartinez09/cleanroom-modpack/main/patches/net.minecraft.json"
+hash-format = "sha256"
+hash = "9921c948c9af6afd145b6cfcb48df7720ec20c5f7fa26adcdf91af302b38b792"
