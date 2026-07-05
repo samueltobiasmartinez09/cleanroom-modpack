@@ -7,6 +7,10 @@ minecraft/*
 !minecraft/switch-to-optifine.bat
 !minecraft/switch-to-celeritas.sh
 !minecraft/switch-to-celeritas.bat
+!minecraft/packwiz-installer-bootstrap.jar
+!minecraft/jre25/
+minecraft/jre25/*
+!minecraft/jre25/java-wrapper.sh
 release
 packwiz
 .github_token
