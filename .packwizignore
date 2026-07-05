@@ -8,3 +8,12 @@ release/
 instance.cfg
 mmc-pack.json
 cleanroom-version.txt
+minecraft/pre-launch.sh
+minecraft/pre-launch.bat
+minecraft/install-java.sh
+minecraft/install-java.bat
+minecraft/switch-to-optifine.sh
+minecraft/switch-to-optifine.bat
+minecraft/switch-to-celeritas.sh
+minecraft/switch-to-celeritas.bat
+minecraft/packwiz-installer-bootstrap.jar

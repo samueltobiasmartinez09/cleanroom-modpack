@@ -9,42 +9,6 @@ file = "instance.cfg"
 hash = "b4a617ea75a1184fcfd3352f9a5f0882c9a7a1adeded94218e1b02903b75ae7f"
 
 [[files]]
-file = "minecraft/install-java.bat"
-hash = "8e3ca2c4aeb23b9bce707a429c185d51bf5076cd0d735723ad1461b706f02538"
-
-[[files]]
-file = "minecraft/install-java.sh"
-hash = "32d3f6c4c59ace322ea096167dd4c524e3784f8df58e1d9a2d256d54189ffcf9"
-
-[[files]]
-file = "minecraft/packwiz-installer-bootstrap.jar"
-hash = "a8fbb24dc604278e97f4688e82d3d91a318b98efc08d5dbfcbcbcab6443d116c"
-
-[[files]]
-file = "minecraft/pre-launch.bat"
-hash = "0a4b9f84aac9856e0722d200d8ff6174f598f540f6f51ee0d0ecc86c15385d1f"
-
-[[files]]
-file = "minecraft/pre-launch.sh"
-hash = "ba4c1279bf9902ab182358ed3a0a7acb88ab179ff1b7488698c5a03889b820d3"
-
-[[files]]
-file = "minecraft/switch-to-celeritas.bat"
-hash = "5f17baf88e9c7c180d334e9c5cb300534bcf3b813c9428f50caf0b2d37780984"
-
-[[files]]
-file = "minecraft/switch-to-celeritas.sh"
-hash = "bec2a1a6291533e153c3d41e6bb8b3ad47a4d4c3f215c6bdfddbbb8325a87269"
-
-[[files]]
-file = "minecraft/switch-to-optifine.bat"
-hash = "09aa2a6ee62d7f50e754601d2e30b6c6a52006128ba3b3dda26fac710fea9d63"
-
-[[files]]
-file = "minecraft/switch-to-optifine.sh"
-hash = "b93877f79db65216ecb1463279055fb2a33420b1e90a3aa04e49a689b83df216"
-
-[[files]]
 file = "mmc-pack.json"
 hash = "d081624b806edbb1aaaf143ef540466ef9bb84650ddfe73db506e2e57ff79ba9"
 
