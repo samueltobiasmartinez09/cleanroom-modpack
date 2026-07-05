@@ -21,11 +21,11 @@ build_zip() {
     rm -f packwiz AGENTS.md cleanroom-version.txt
 
     if [ "$PLATFORM" = "windows" ]; then
-        rm -f minecraft/*.sh
+        rm -f minecraft/*.sh minecraft/jre25/*.sh
         sed -i 's|PreLaunchCommand=.*|PreLaunchCommand=cmd.exe /c $INST_DIR\\minecraft\\pre-launch.bat|' instance.cfg
         sed -i 's|JavaPath=.*|JavaPath=./minecraft/jre25/java-wrapper.bat|' instance.cfg
     else
-        rm -f minecraft/*.bat
+        rm -f minecraft/*.bat minecraft/jre25/*.bat
         rm -f minecraft/jre25/java-wrapper.bat
     fi
 
