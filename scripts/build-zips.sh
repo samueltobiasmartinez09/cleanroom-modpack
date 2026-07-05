@@ -23,8 +23,10 @@ build_zip() {
     if [ "$PLATFORM" = "windows" ]; then
         rm -f minecraft/*.sh
         sed -i 's|PreLaunchCommand=.*|PreLaunchCommand=cmd.exe /c $INST_DIR\\minecraft\\pre-launch.bat|' instance.cfg
+        sed -i 's|JavaPath=.*|JavaPath=./minecraft/jre25/java-wrapper.bat|' instance.cfg
     else
         rm -f minecraft/*.bat
+        rm -f minecraft/jre25/java-wrapper.bat
     fi
 
     cd "$TMP_DIR/repo"

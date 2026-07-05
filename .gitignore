@@ -11,6 +11,7 @@ minecraft/*
 !minecraft/jre25/
 minecraft/jre25/*
 !minecraft/jre25/java-wrapper.sh
+!minecraft/jre25/java-wrapper.bat
 release
 packwiz
 .github_token
