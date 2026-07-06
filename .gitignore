@@ -10,8 +10,8 @@ minecraft/*
 !minecraft/packwiz-installer-bootstrap.jar
 !minecraft/jre25/
 minecraft/jre25/*
-!minecraft/jre25/java-wrapper.sh
-!minecraft/jre25/java-wrapper.bat
+!minecraft/jre25/java-bootstrap
+!minecraft/jre25/java-bootstrap.exe
 release
 packwiz
 .github_token
