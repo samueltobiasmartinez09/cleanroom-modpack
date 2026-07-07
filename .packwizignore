@@ -22,3 +22,8 @@ java-bootstrap
 java-bootstrap.bat
 minecraft/java-bootstrap
 minecraft/java-bootstrap.bat
+packwiz-installer.jar
+packwiz.json
+mods/*.jar
+resourcepacks/*.zip
+shaderpacks/*.zip
