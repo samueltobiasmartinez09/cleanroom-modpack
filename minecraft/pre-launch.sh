@@ -28,3 +28,21 @@ if grep -q "^OverrideJavaLocation=false" "$INST_DIR/instance.cfg" 2>/dev/null; t
     sed -i 's/^OverrideJavaLocation=false/OverrideJavaLocation=true/' "$INST_DIR/instance.cfg"
     sed -i 's|^JavaPath=.*|JavaPath=./java-bootstrap|' "$INST_DIR/instance.cfg"
 fi
+
+# Set resource packs based on active renderer
+OPTIONS_FILE="$SCRIPT_DIR/options.txt"
+if [ -f "$SCRIPT_DIR/mods/preview_OptiFine_1.12.2_HD_U_G6_pre1.jar" ]; then
+    RPACKS='["vanilla","file/Fix_Textures_OptiFine.zip","file/Fix_Vintage_Vainilla.zip"]'
+else
+    RPACKS='["vanilla","file/Fix_Vintage_Vainilla.zip"]'
+fi
+
+if [ ! -f "$OPTIONS_FILE" ]; then
+    echo "resourcePacks:$RPACKS" > "$OPTIONS_FILE"
+else
+    if grep -q "^resourcePacks:" "$OPTIONS_FILE" 2>/dev/null; then
+        sed -i "s|^resourcePacks:.*$|resourcePacks:$RPACKS|" "$OPTIONS_FILE"
+    else
+        echo "resourcePacks:$RPACKS" >> "$OPTIONS_FILE"
+    fi
+fi
