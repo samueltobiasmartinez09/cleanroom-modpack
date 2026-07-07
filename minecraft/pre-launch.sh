@@ -18,6 +18,11 @@ if [ -d "$SCRIPT_DIR/patches" ]; then
     cp -rf "$SCRIPT_DIR/patches"/* "$INST_DIR/patches/"
 fi
 
+# Copy updated instance.cfg from packwiz download to instance root
+if [ -f "$SCRIPT_DIR/instance.cfg" ]; then
+    cp "$SCRIPT_DIR/instance.cfg" "$INST_DIR/instance.cfg"
+fi
+
 # Enable Java override for next launch (avoids "couldn't be found" error on first run)
 if grep -q "^OverrideJavaLocation=false" "$INST_DIR/instance.cfg" 2>/dev/null; then
     sed -i 's/^OverrideJavaLocation=false/OverrideJavaLocation=true/' "$INST_DIR/instance.cfg"

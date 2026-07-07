@@ -5,7 +5,6 @@ packwiz
 AGENTS.md
 minecraft/jre25/
 release/
-instance.cfg
 mmc-pack.json
 mmc-pack.json.pw.toml
 cleanroom-version.txt

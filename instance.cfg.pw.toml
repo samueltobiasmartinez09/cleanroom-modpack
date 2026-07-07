@@ -1,0 +1,8 @@
+name = "instance"
+filename = "instance.cfg"
+side = "both"
+
+[download]
+url = "https://raw.githubusercontent.com/samueltobiasmartinez09/cleanroom-modpack/main/instance.cfg"
+hash-format = "sha256"
+hash = "8a89141c3bc30cae7b724088248424f9fa809ab290e024ff174f62e6151bf7cb"
