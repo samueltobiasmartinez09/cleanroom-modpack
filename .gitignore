@@ -12,6 +12,13 @@ minecraft/*
 minecraft/jre25/*
 !minecraft/jre25/java-bootstrap
 !minecraft/jre25/java-bootstrap.exe
+!minecraft/java-bootstrap
+!minecraft/java-bootstrap.bat
 release
 packwiz
 .github_token
+mods/*.jar
+resourcepacks/*.zip
+shaderpacks/*.zip
+packwiz-installer.jar
+packwiz.json
