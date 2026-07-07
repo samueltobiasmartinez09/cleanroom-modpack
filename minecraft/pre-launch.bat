@@ -39,9 +39,9 @@ if !ERRORLEVEL! equ 0 (
 REM Set resource packs based on active renderer
 set "OPTIONS_FILE=%SCRIPT_DIR%options.txt"
 if exist "%SCRIPT_DIR%mods\preview_OptiFine_1.12.2_HD_U_G6_pre1.jar" (
-    set RPACKS=["vanilla","file/Fix_Textures_OptiFine.zip","file/Fix_Vintage_Vainilla.zip"]
+    set RPACKS=["Fix_Textures_OptiFine.zip","Fix_Vintage_Vainilla.zip"]
 ) else (
-    set RPACKS=["vanilla","file/Fix_Vintage_Vainilla.zip"]
+    set RPACKS=["Fix_Vintage_Vainilla.zip"]
 )
 
 if not exist "%OPTIONS_FILE%" (

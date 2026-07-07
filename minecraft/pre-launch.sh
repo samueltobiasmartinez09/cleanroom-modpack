@@ -32,9 +32,9 @@ fi
 # Set resource packs based on active renderer
 OPTIONS_FILE="$SCRIPT_DIR/options.txt"
 if [ -f "$SCRIPT_DIR/mods/preview_OptiFine_1.12.2_HD_U_G6_pre1.jar" ]; then
-    RPACKS='["vanilla","file/Fix_Textures_OptiFine.zip","file/Fix_Vintage_Vainilla.zip"]'
+    RPACKS='["Fix_Textures_OptiFine.zip","Fix_Vintage_Vainilla.zip"]'
 else
-    RPACKS='["vanilla","file/Fix_Vintage_Vainilla.zip"]'
+    RPACKS='["Fix_Vintage_Vainilla.zip"]'
 fi
 
 if [ ! -f "$OPTIONS_FILE" ]; then
