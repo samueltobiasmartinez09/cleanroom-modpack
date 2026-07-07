@@ -23,6 +23,7 @@ build_zip() {
     if [ "$PLATFORM" = "windows" ]; then
         rm -f minecraft/*.sh minecraft/jre25/*.sh minecraft/jre25/java-bootstrap minecraft/jre25/java-bootstrap.c java-bootstrap minecraft/java-bootstrap
         sed -i 's|PreLaunchCommand=.*|PreLaunchCommand=cmd.exe /c $INST_DIR\\minecraft\\pre-launch.bat|' instance.cfg
+        sed -i 's@^JavaPath=.*@JavaPath=.\\java-bootstrap.bat@' instance.cfg
     else
         rm -f minecraft/*.bat minecraft/jre25/*.bat minecraft/jre25/java-bootstrap.exe minecraft/jre25/java-bootstrap.c java-bootstrap.bat minecraft/java-bootstrap.bat
     fi
