@@ -19,7 +19,6 @@ build_zip() {
 
     rm -rf scripts/ .github/
     rm -f packwiz AGENTS.md cleanroom-version.txt .gitignore
-    rm -f patches/net.minecraft.json patches/net.minecraftforge.json patches/org.lwjgl3.json
 
     if [ "$PLATFORM" = "windows" ]; then
         rm -f minecraft/*.sh minecraft/jre25/*.sh minecraft/jre25/java-bootstrap minecraft/jre25/java-bootstrap.c java-bootstrap minecraft/java-bootstrap
